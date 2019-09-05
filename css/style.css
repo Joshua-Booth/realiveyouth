@@ -1,0 +1,3 @@
+.uk-navbar-toggle img, svg {
+    filter: brightness(0) saturate(100%);
+}

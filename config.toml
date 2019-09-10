@@ -1,4 +1,4 @@
-baseURL = "http://realiveyouthdev.azurewebsites.net/"
+baseURL = "https://realiveyouth.netlify.com/"
 languageCode = "en-us"
 title = "Equipped Youth Manual"
 theme = "equippedyouth"

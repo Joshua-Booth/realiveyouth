@@ -1,0 +1,21 @@
+{{ partial "head.html" .}}
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+
+<main>
+	<article>
+	<header>
+		<h1>{{.Title}}</h1>
+	</header>
+	{{- .Content -}}
+    <ul>
+      {{ range .Pages }}
+        <li>
+			<a href="{{.Permalink}}">{{.Title}}</a>
+		</li>
+      {{ end }}
+    </ul>
+  </article>
+<main>
+
+{{partial "footer.html"}}

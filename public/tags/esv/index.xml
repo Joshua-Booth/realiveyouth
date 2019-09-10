@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ESV on Equipped Youth Manual</title>
+    <link>http://realiveyouthdev.azurewebsites.net/tags/esv/</link>
+    <description>Recent content in ESV on Equipped Youth Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://realiveyouthdev.azurewebsites.net/tags/esv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ephesians 4:32</title>
+      <link>http://realiveyouthdev.azurewebsites.net/bible_verses/ephesians-4-32/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://realiveyouthdev.azurewebsites.net/bible_verses/ephesians-4-32/</guid>
+      <description>Be kind to one another, tenderhearted, forgiving one another, as God in Christ forgave you.</description>
+    </item>
+    
+    <item>
+      <title>James 1:19-20</title>
+      <link>http://realiveyouthdev.azurewebsites.net/bible_verses/james-1-19-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://realiveyouthdev.azurewebsites.net/bible_verses/james-1-19-20/</guid>
+      <description>Know this, my beloved brothers: let every person be quick to hear, slow to speak, slow to anger; for the anger of man does not produce the righteousness of God.</description>
+    </item>
+    
+  </channel>
+</rss>

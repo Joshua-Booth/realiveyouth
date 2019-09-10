@@ -1,0 +1,20 @@
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+	<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+		<button class="uk-offcanvas-close uk-close" type="button" data-uk-close></button>
+		<ul class="uk-nav uk-nav-default">
+			<li class="uk-active"><a href="#">Home</a></li>
+			<li class="uk-parent">
+				<a href="#">Categories</a>
+				<ul class="uk-nav-sub">
+					<li><a href="{{.Site.BaseURL}}/categories/evangelism">Evangelism</a></li>
+					<li><a href="{{.Site.BaseURL}}/categories/christian-living">Christian Living</a></li>
+					<li><a href="{{.Site.BaseURL}}/categories/worship">Worship</a></li>
+				</ul>
+			</li>
+			<li><a href="{{.Site.BaseURL}}/about.html"><span class="uk-margin-small-right" data-uk-icon="icon: table"></span> About</a></li>
+			<li><a href="{{.Site.BaseURL}}/contact.html"><span class="uk-margin-small-right" data-uk-icon="icon: thumbnails"></span> Contact</a></li>
+			<li class="uk-nav-divider"></li>
+			<li><a href="{{.Site.BaseURL}}/privacy.html"><span class="uk-margin-small-right" data-uk-icon="icon: table"></span> Privacy</a></li>
+		</ul>
+	</div>
+</div>

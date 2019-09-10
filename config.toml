@@ -1,0 +1,7 @@
+baseURL = "http://realiveyouthdev.azurewebsites.net/"
+languageCode = "en-us"
+title = "Equipped Youth Manual"
+theme = "equippedyouth"
+
+[params]
+  mainSections = ["bible_verses", "questions", "songs", "testimonies", "videos"]

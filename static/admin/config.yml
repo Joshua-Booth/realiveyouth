@@ -24,7 +24,7 @@ collections:
    slug: "{{slug}}"
    fields:
     - {label: "Title", name: "title", widget: "string", required: true}
-    - {label: "Categories", name: "categories", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
     - {label: Type, name: type, widget: hidden, default: post}
     - {labe: "Version", name: "version", widget: "text", required: true}
     - {label: "Content", name: "body", widget: "markdown", required: true}

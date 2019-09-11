@@ -49,7 +49,7 @@ collections:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
       - {label: Type, name: type, widget: hidden, default: post}
-      - {label: "URL", name: "url", widget: "string", required: true}
+      - {label: "URL", name: "link", widget: "string", required: true}
 
   - name: "videos"
     label: "Videos"
@@ -60,4 +60,4 @@ collections:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
       - {label: Type, name: type, widget: hidden, default: post}
-      - {label: "URL", name: "url", widget: "string", required: true}
+      - {label: "URL", name: "link", widget: "string", required: true}

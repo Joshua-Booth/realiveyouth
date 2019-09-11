@@ -1,7 +1,7 @@
 ---
 title: "Psalm 75:1"
-categories: ['worship']
-tags: ['NKJV']
+categories: "worship"
+version: "NKJV"
 ---
 
 We give thanks to You, O God, we give thanks!

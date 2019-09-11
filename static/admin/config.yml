@@ -13,8 +13,9 @@ collections:
    slug: "{{slug}}"
    fields:
     - {label: "Title", name: "title", widget: "string", required: true}
-    - {label: "Categories", name: "categories", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
     - {label: Type, name: type, widget: hidden, default: post}
+    - {label: "Content", name: "body", widget: "markdown", required: true}
 
  - name: "bible_verses"
    label: "Bible Verses"
@@ -23,5 +24,40 @@ collections:
    slug: "{{slug}}"
    fields:
     - {label: "Title", name: "title", widget: "string", required: true}
-    - {label: "Categories", name: "categories", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
     - {label: Type, name: type, widget: hidden, default: post}
+    - {labe: "Version", name: "version", widget: "text", required: true}
+    - {label: "Content", name: "body", widget: "markdown", required: true}
+  
+ - name: "testimonies"
+   label: "Testimonies"
+   folder: "content/testimonies"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
+    - {label: Type, name: type, widget: hidden, default: post}
+    - {label: "Content", name: "body", widget: "markdown", required: true}
+
+ - name: "songs"
+   label: "Songs"
+   folder: "content/songs"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
+    - {label: Type, name: type, widget: hidden, default: post}
+    - {label: "URL", name: "link", widget: "string", required: true}
+
+ - name: "videos"
+   label: "Videos"
+   folder: "content/videos"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["evangelism", "christian-living", "worship"], required: true}
+    - {label: Type, name: type, widget: hidden, default: post}
+    - {label: "URL", name: "link", widget: "string", required: true}

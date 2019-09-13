@@ -1,20 +1,32 @@
-<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
-	<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-		<button class="uk-offcanvas-close uk-close" type="button" data-uk-close></button>
-		<ul class="uk-nav uk-nav-default">
-			<li class="uk-active"><a href="#">Home</a></li>
+<div id="offcanvas-nav" data-uk-offcanvas="overlay: true; esc-close: true; bg-close: true;">
+	<div class="uk-offcanvas-bar uk-flex uk-flex-column uk-offcanvas-bar-animation uk-offcanvas-slide uk-background-default">
+		<ul class="uk-nav uk-nav-primary uk-nav-left">
+			<li class="uk-nav-header">
+				<img id="mobile-nav-close" class="uk-offcanvas-close navbutton uk-hidden@m" data-src="img/Navigation.svg" alt="Navigate" uk-img>
+			</li>
+			<li class="uk-active"><a class="uk-link-muted" href="{{.Site.BaseURL}}">Home</a></li>
 			<li class="uk-parent">
-				<a href="#">Categories</a>
-				<ul class="uk-nav-sub">
-					<li><a href="{{.Site.BaseURL}}/categories/evangelism">Evangelism</a></li>
+				<a href="{{.Site.BaseURL}}/categories">Categories</a>
+				<ul class="black uk-nav-sub">
+					<li><a class="uk-link-text" href="{{.Site.BaseURL}}/categories/evangelism">Evangelism</a></li>
 					<li><a href="{{.Site.BaseURL}}/categories/christian-living">Christian Living</a></li>
 					<li><a href="{{.Site.BaseURL}}/categories/worship">Worship</a></li>
 				</ul>
 			</li>
-			<li><a href="{{.Site.BaseURL}}/about.html"><span class="uk-margin-small-right" data-uk-icon="icon: table"></span> About</a></li>
-			<li><a href="{{.Site.BaseURL}}/contact.html"><span class="uk-margin-small-right" data-uk-icon="icon: thumbnails"></span> Contact</a></li>
-			<li class="uk-nav-divider"></li>
-			<li><a href="{{.Site.BaseURL}}/privacy.html"><span class="uk-margin-small-right" data-uk-icon="icon: table"></span> Privacy</a></li>
+			<li><a href="{{.Site.BaseURL}}/about"><span class="uk-margin"></span> About</a></li>
+			<li><a href="{{.Site.BaseURL}}/contact"><span class="uk-margin"></span> Contact</a></li>
+			<li class="uk-align-center uk-text-center">
+				<a id="mobile-nav-instagram" class="uk-display-inline-block" href="https://www.instagram.com/realiveyouth/">
+					<img data-src="img/instagram.svg" width="42px" alt="Instagram" uk-img>
+				</a>
+				<a class="uk-display-inline-block" href="https://www.facebook.com/groups/realive.youth">
+					<img data-src="img/facebook.svg" width="42px" alt="Facebook" uk-img>
+				</a>
+			</li>
+			<li id="mobile-nav-footer" class="uk-position-bottom-center uk-nav-center uk-padding">
+				<span class="uk-margin"></span><span id="copyright">© Realive Youth 2019</span>
+				<a id="privacy-link" href="{{.Site.BaseURL}}/privacy">| Privacy</a>
+			</li>
 		</ul>
 	</div>
 </div>

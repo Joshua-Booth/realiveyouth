@@ -22,14 +22,12 @@
         <div class="uk-container">
             <div class="uk-height-large uk-cover-container uk-border-rounded" style="border-radius: 40px">
                 <img src="https://picsum.photos/1300/500/?random" alt="Alt img" data-uk-cover>
-                <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-light uk-text-center">
+                <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">How can I tell others about Jesus?</h1>
                         <p>Here are some practical tips for sharing your faith with others.</p>
-                        <a href="questions/how-can-i-tell-others" class="uk-button uk-button-default uk-margin-top">GO TO POST</a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -37,27 +35,94 @@
     <!--CONTENT-->
     <div class="uk-section uk-section-default">
         <div class="uk-container">
-            <div class="uk-grid" data-ukgrid>
-                <div class="uk-width-2-3@m">
+            <div class="uk-grid uk-text-center" data-ukgrid>
+                <div class="uk-width-2-4@m">
 				{{.Content}}
                 {{range where .Site.RegularPages "Type" "in" site.Params.mainSections}}
-                    <article class="uk-section uk-section-small uk-padding-remove-top">
-                        <header>
-                            <h2 class="uk-margin-remove-adjacent uk-text-bold uk-margin-small-bottom">
-								<a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
-								{{.Title}}
-								</a>
-							</h2>
-                        </header>
-                    </article>
+                    {{ if eq .File.Dir "bible_verses\\" }}
+                    <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove verse-width">
+                        <div class="uk-container content-spacing">
+
+                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom reference">
+                                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                    <h3 class="post-header" style="color:black">
+                                        <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
+                                            {{ .Title }} ({{ upper .Params.version }})
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="uk-height-small uk-cover-container border-rounded uk-box-shadow-large">
+                                <div class="uk-position-cover uk-flex uk-flex-top uk-light uk-text-center uk-text-secondary verse-inside-padding uk-overflow-hidden">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        {{ if le (len .Content) 120 }}
+                                            <p style="margin-top: 35px;">{{ .Content }}</p>
+                                        {{ else if le (len .Content) 130 }}
+                                            <p style="margin-top: 30px;">{{ .Content }}</p>
+                                        {{ else if le (len .Content) 140 }}
+                                            <p style="margin-top: 25px;">{{ .Content }}</p>
+                                        {{ else }}
+                                            <p style="margin-top: 20px;">{{ .Content }}</p>
+                                        {{ end }}
+                                    </div>
+                                    <div class="fadeout"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
+                                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                    <span style="color:black">{{ humanize .Params.categories }}</span>
+                                </div>
+                            </div>
+
+                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom save uk-border-circle">
+                                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                    <img class="uk-image" href="#" data-src="img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
+                                </div>
+                            </div>
+
+                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom share uk-border-circle">
+                                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                    <img class="uk-image" href="#" data-src="img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {{ else }}
+                    <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove" style="width:75%">
+                            <div class="uk-container content-spacing">
+                                <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
+                                    <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left white-background">
+                                        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                            <h3 class="post-header">
+                                                <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">{{ .Title }}</a>
+                                            </h3>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <span style="color:black">{{ humanize .Params.categories }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom save uk-border-circle">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <img class="uk-image" href="#" data-src="img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
+                                    </div>
+                                </div>
+        
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom share uk-border-circle">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <img class="uk-image" href="#" data-src="img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    {{ end }}
                 {{end}}
 				</div>
-                <div class="uk-width-1-3@m">
-                    <h4 class="uk-heading-line uk-text-bold" style="text-align:center"><span>About Us</span></h4>
-                    <div class="uk-tile uk-tile-small uk-tile-muted uk-border-rounded">
-                        The Realive Equipped Youth Manual is an online resource to enable young people to live, serve and to tell others about Jesus.
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -66,7 +131,7 @@
     <!-- BOTTOM NAVIGATION -->
 
     <div class="uk-container" uksticky>
-		<nav id="mobilenav" style="background-color: white;">
+		<nav id="mobilenav">
 			<div class="uk-navbar-left nav-overlay">
 				<!-- <a class="uk-navbar-toggle uk-hidden@m" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>-->
 				<a class="uk-navbar-item" href="#" title="Home">Home</a>

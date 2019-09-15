@@ -90,6 +90,41 @@
                         </div>
                     </section>
                     {{ end }}
+                    {{ if or (eq .File.Dir "videos/") (eq .File.Dir "videos\\") }}
+                    <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove" style="width:49%">
+                            <div class="uk-container content-spacing">
+                                <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
+                                    <div class="uk-overlay uk-overlay-primary uk-position-cover uk-padding-remove uk-flex uk-light white-background">
+                                        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small" class="uk-width-1-1">
+                                            <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
+                                                <iframe class="uk-height-medium uk-width-1-1 border-rounded" src="https://www.youtube.com/embed/{{.Params.link}}"
+                                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </a>https://www.youtube.com/watch?v=TCSUKIhjevo
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <span style="color:black">{{ humanize .Params.categories }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom save uk-border-circle">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <img class="uk-image" href="#" data-src="img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
+                                    </div>
+                                </div>
+        
+                                <div class="uk-overlay uk-light uk-text-left uk-text-bottom share uk-border-circle">
+                                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                        <img class="uk-image" href="#" data-src="img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    {{ end }}
                 {{end}}
 				</div>
             </div>

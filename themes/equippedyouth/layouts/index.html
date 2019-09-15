@@ -39,8 +39,7 @@
                 <div class="uk-width-2-4@m">
 				{{.Content}}
                 {{range where .Site.RegularPages "Type" "in" site.Params.mainSections}}
-                    {{ .File.Dir }} {{ .File.Path}} {{ .Title }} {{.Summary}}
-                    {{ if eq .File.Dir "bible_verses\\" }}
+                    {{ if or (eq .File.Dir "bible_verses/") (eq .File.Dir "bible_verses\\") }}
                     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove verse-width">
                         <div class="uk-container content-spacing">
 

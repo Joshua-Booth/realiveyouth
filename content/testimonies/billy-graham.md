@@ -1,6 +1,7 @@
 ---
 title: "Billy Graham"
 categories: "evangelism"
+type: testimonies
 ---
 
 One day in May 1934, 15-year-old Billy Graham came home from school and set out to pitch hay to the mules with one of the hired hands at his family’s farm on the outskirts of Charlotte, North Carolina. The two heard singing from behind the barn, and the hired man wondered aloud what was happening.

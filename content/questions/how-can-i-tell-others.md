@@ -1,6 +1,7 @@
 ---
 title: "How can I tell others about Jesus?"
 categories: evangelism
+type: questions
 ---
 
 Pray and ask God to give you the right words to say and to show you the best time to say them. Then explain the simple good news of salvation. Here are some tips.

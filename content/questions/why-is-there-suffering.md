@@ -1,6 +1,7 @@
 ---
 title: "Why is there suffering?"
 categories: "evangelism"
+type: questions
 ---
 
 Study the soil for a moment. It naturally produces weeds. No one plants them; no one waters them. They even stubbornly push through cracks of a dry sidewalk. Millions of useless weeds sprout like there’s no tomorrow, strangling our crops and ruining our lawns. Pull them out by the roots, and there will be more tomorrow. They are nothing but a curse!

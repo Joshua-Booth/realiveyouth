@@ -15,6 +15,14 @@
         width: 100% !important;
     }
 
+    .testimony-width {
+        width: 100%;
+    }
+
+    .testimony-image {
+        height: 1000px;
+    }
+
     .save {
         margin-left: 65%;
     }
@@ -39,6 +47,14 @@
 
     .video-width {
         width: 100% !important;
+    }
+
+    .testimony-width {
+        width: 100%;
+    }
+
+    .testimony-image {
+        height: 1000px;
     }
 
     .save {
@@ -67,6 +83,14 @@
         width: 70% !important;
     }
 
+    .testimony-width {
+        width: 80%;
+    }
+
+    .testimony-image {
+        height: 1000px;
+    }
+
     .save {
         margin-left: 73%;
     }
@@ -79,6 +103,10 @@
 @media (min-width: 960px) {
     .video-width {
         width: 49% !important;
+    }
+
+    .testimony-width {
+        width: 49%;
     }
 
     .save {
@@ -148,7 +176,14 @@
 .post-header {
     margin-bottom: -8px !important;
     margin-left: 5px;
+}
+
+.black {
     color:black !important;
+}
+
+.white {
+    color: white !important;
 }
 
 .content-spacing {
@@ -179,6 +214,11 @@
     padding: 1.5px 8px;
 }
 
+.testimony-header {
+    z-index: 10;
+    margin-top: -16px;
+    background-color: transparent;
+}
 
 .save {
     z-index: 10;

@@ -1,0 +1,20 @@
+<nav id="fixedBottomNav" class="uk-navbar-container uk-position-fixed uk-position-bottom uk-hidden@s" style="z-index: 10;">
+    <div class="uk-navbar">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="{{.Site.BaseURL}}">Home</a></li>  
+            </ul>
+        </div> 
+        <div class="uk-navbar-right">
+            <div id="savedPostsButton">
+                <a href="{{.Site.BaseURL}}/saved"><img class="uk-image uk-active" href="#" data-src="img/Save.svg" width="16.6px" height="16.6px" alt="Save" uk-img></a>
+            </div>
+            <a class="uk-navbar-toggle" uk-search-icon href="#" onclick="hideSavedPostsButton()"></a>
+            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: -40%">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

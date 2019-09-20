@@ -154,6 +154,10 @@
     color: black !important;
 }
 
+#fixedBottomNav {
+    background-color: white !important;
+}
+
 #privacy-link, #copyright {
     display:inline-block;
     color: black !important;

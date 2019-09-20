@@ -207,26 +207,8 @@
 
     <!-- BOTTOM NAVIGATION -->
 
-    <div class="uk-container" uksticky>
-		<nav id="mobilenav">
-			<div class="uk-navbar-left nav-overlay">
-				<!-- <a class="uk-navbar-toggle uk-hidden@m" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>-->
-				<a class="uk-navbar-item" href="#" title="Home">Home</a>
-			</div>
-			<div class="uk-navbar-right nav-overlay">
-					<a class="uk-navbar-toggle" data-uk-search-icon data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
-			</div>
-			<div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
-				<div class="uk-navbar-item uk-width-expand">
-					<form class="uk-search uk-search-navbar uk-width-1-1">
-						<input class="uk-search-input" type="search" placeholder="Search...">
-					</form>
-				</div>
-				<a class="uk-navbar-toggle" data-uk-close data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
-			</div>
-		</nav>
-    </div>
-
+    {{ partial "mobilenav.html" . }}
+    
     <!-- /BOTTOM NAVIGATION -->
 
     <!-- OFFCANVAS -->

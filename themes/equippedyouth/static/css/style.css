@@ -1,4 +1,8 @@
 @media (max-width: 450px) {
+    #page-title {
+        width: 70%;
+    }
+
     #offcanvas-nav li {
         padding-left: 5px;
     }
@@ -33,6 +37,10 @@
 }
 
 @media (min-width: 450px) and (max-width: 640px) {
+    #page-title {
+        width: auto;
+    }
+
     #offcanvas-nav li {
         padding-left: 5px;
     }
@@ -67,6 +75,10 @@
 }
 
 @media (min-width: 640px) {
+    #page-title {
+        width: auto;
+    }
+
     #offcanvas-nav li {
         padding-left: 20px;
     }
@@ -116,6 +128,10 @@
     .share {
         margin-left: calc(80% + 35px);
     }
+}
+
+#page-title {
+    text-align: center
 }
 
 .uk-navbar-toggle img, svg {

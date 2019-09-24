@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    {{ block "metadata" . }}{{ end }}
+    {{- partial "head.html" . -}}
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+  </head>
+  <body>
+    {{- partial "header.html" . -}}
+    {{- partial "navigation.html" . -}}
+
+    <div id="content">
+    {{ block "main" . }}
+    {{ end }}
+    </div>
+  
+    {{ block "footer" . }}{{ end }}
+    {{- partial "mobilenav.html" . -}}
+    {{- partial "offcanvas.html" . -}}
+    {{- partial "footer.html" . -}}
+
+    <script>
+        if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+            window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+            });
+            }
+        });
+        }
+    </script>
+  </body>
+</html>

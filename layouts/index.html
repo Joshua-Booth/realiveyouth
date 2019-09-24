@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+{{ define "metadata" }}
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
     <title>Equipped Youth Manual</title>
-    {{ partial "head.html"}}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-	<!--HEADER-->
-	{{ partial "header.html" . }}
-    <!--/HEADER-->
-
-    <!-- NAVIGATION -->
-	{{ partial "navigation.html" . }}
-    <!-- /NAVIGATION -->
-
+{{ end }}
+{{ define "main" }}
     <!-- HERO -->
     <section class="uk-section uk-section-small">
         <div class="uk-container">
@@ -24,7 +12,9 @@
                 <img src="https://picsum.photos/1300/500/?random" alt="Alt img" data-uk-cover>
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">How can I tell others about Jesus?</h1>
+                        <a href="{{ .Site.BaseURL }}/questions/how-can-i-tell-others">
+                            <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">How can I tell others about Jesus?</h1>
+                        </a>
                         <p>Here are some practical tips for sharing your faith with others.</p>
                     </div>
                 </div>
@@ -37,7 +27,7 @@
         <div class="uk-container">
             <div class="uk-grid uk-text-center" data-ukgrid>
                 <div id="home-content" class="uk-width-2-4@m">
-				{{.Content}}
+                {{.Content}}
                 {{range where .Site.RegularPages "Type" "in" site.Params.mainSections}}
 
                     {{ if or (eq .File.Dir "bible_verses/") (eq .File.Dir "bible_verses\\") }}
@@ -228,36 +218,9 @@
                         </section>
                     {{ end }}
                 {{end}}
-				</div>
+                </div>
             </div>
         </div>
     </div>
     <!--/CONTENT-->
-
-    <!-- BOTTOM NAVIGATION -->
-
-    {{ partial "mobilenav.html" . }}
-    
-    <!-- /BOTTOM NAVIGATION -->
-
-    <!-- OFFCANVAS -->
-	{{ partial "offcanvas.html" . }}
-    <!-- /OFFCANVAS -->
-
-    <!--FOOTER-->
-	{{ partial "footer.html" . }}
-    <!--/FOOTER-->
-
-    <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-      </script>
-</body>
-</html>
+{{ end }}

@@ -5,3 +5,5 @@ theme = "equippedyouth"
 
 [params]
   mainSections = ["bible_verses", "questions", "songs", "testimonies", "videos"]
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

@@ -18,8 +18,8 @@
 			</div>
 			<div class="nav-overlay uk-navbar-left uk-flex-1 top-nav" hidden>
 				<div class="uk-navbar-item uk-width-expand">
-					<form class="uk-search uk-search-navbar uk-width-1-1">
-						<input class="uk-search-input" type="search" placeholder="Search...">
+					<form class="uk-search uk-search-navbar uk-width-1-1" action="{{.Site.BaseURL}}/search/" onsubmit="this.search.value">
+						<input class="uk-search-input" type="search" name="s" placeholder="Search...">
 					</form>
 				</div>
 				<a class="uk-navbar-toggle" data-uk-close data-uk-toggle="target: .top-nav; animation: uk-animation-fade" href="#"></a>

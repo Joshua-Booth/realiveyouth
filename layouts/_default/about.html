@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+{{ define "metadata" }}
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
     <title>Equipped Youth Manual</title>
-	{{ partial "head.html"}}
-</head>
-<body>
-	<!--HEADER-->
-	{{ partial "header.html" . }}
-    <!--/HEADER-->
-
-    <!-- NAVIGATION -->
-	{{ partial "navigation.html" . }}
-    <!-- /NAVIGATION -->
-
-    <!--CONTENT-->
+{{ end }}
+{{ define "main" }}
     <div class="uk-section uk-section-default">
         <div class="uk-container">
             <div class="uk-grid" data-ukgrid>
@@ -39,16 +27,4 @@
             </div>
         </div>
     </div>
-    <!--/CONTENT-->
-
-    <!-- /BOTTOM NAVIGATION -->
-
-    <!--FOOTER-->
-	{{ partial "footer.html" . }}
-    <!--/FOOTER-->
-
-    <!-- OFFCANVAS -->
-	{{ partial "offcanvas.html" . }}
-    <!-- /OFFCANVAS -->
-</body>
-</html>
+{{ end }}

@@ -1,21 +1,23 @@
-{{ partial "head.html" .}}
-{{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-
-<main>
-	<article>
-	<header>
-		<h1>{{.Title}}</h1>
-	</header>
-	{{- .Content -}}
-    <ul>
-      {{ range .Pages }}
-        <li>
-			<a href="{{.Permalink}}">{{.Title}}</a>
-		</li>
-      {{ end }}
-    </ul>
-  </article>
-<main>
-
-{{partial "footer.html"}}
+{{ define "metadata" }}
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Equipped Youth Manual</title>
+{{ end }}
+{{ define "main" }}
+	<main>
+		<article>
+		<header>
+			<h1>{{.Title}}</h1>
+		</header>
+		{{- .Content -}}
+		<ul>
+		{{ range .Pages }}
+			<li>
+				<a href="{{.Permalink}}">{{.Title}}</a>
+			</li>
+		{{ end }}
+		</ul>
+	</article>
+	<main>
+{{ end }}

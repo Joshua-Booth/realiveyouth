@@ -4,6 +4,6 @@ title = "Equipped Youth Manual"
 theme = "equippedyouth"
 
 [params]
-  mainSections = ["bible_verses", "questions", "songs", "testimonies", "videos"]
+  mainSections = ["bible_verses", "questions", "songs", "testimonies", "articles", "videos"]
 [outputs]
   home = ["HTML", "RSS", "JSON"]

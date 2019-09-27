@@ -1,0 +1,8 @@
+---
+title: "Acts 4:12"
+categories: "evangelism"
+version: "niv"
+type: bible_verses
+---
+
+Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.”

@@ -23,7 +23,11 @@
         width: 100%;
     }
 
-    .testimony-image, .article-image {
+    .testimony-image {
+        height: 1000px;
+    }
+
+    .article-image {
         height: 1000px;
     }
 

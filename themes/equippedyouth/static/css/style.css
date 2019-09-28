@@ -1,3 +1,5 @@
+/* Media Queries */
+
 @media (max-width: 450px) {
     #page-title {
         width: 70%;
@@ -23,11 +25,7 @@
         width: 100%;
     }
 
-    .testimony-image {
-        height: 1000px;
-    }
-
-    .article-image {
+    .testimony-image, .article-image {
         height: 1000px;
     }
 
@@ -133,6 +131,8 @@
         margin-left: calc(80% + 35px);
     }
 }
+
+/* Main Page Content Styles */
 
 #page-title {
     text-align: center

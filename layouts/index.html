@@ -29,7 +29,6 @@
                 <div id="home-content" class="uk-width-2-4@m">
                 {{.Content}}
                 {{range where .Site.RegularPages "Type" "in" site.Params.mainSections}}
-
                     {{ if or (eq .File.Dir "bible_verses/") (eq .File.Dir "bible_verses\\") }}
                         <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
                             <div class="uk-container content-spacing">
@@ -58,8 +57,8 @@
                                         </div>
                                         <div class="fadeout"></div>
                                     </div>
-                                    
                                 </div>
+
                                 <div class="verse-container">
                                     <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                                         <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -95,6 +94,7 @@
                                         </h3>
                                     </div>
                                 </div>
+
                                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                         <span class="black">{{ humanize .Params.categories }}</span>
@@ -124,6 +124,7 @@
                                         <iframe src={{ replace .Params.link "track" "embed/track" }} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                                     </div>
                                 </div>
+
                                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                         <span class="black">{{ humanize .Params.categories }}</span>
@@ -159,6 +160,7 @@
                                         </div>
                                     </div>                                    
                                 </div>
+
                                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                         <span class="black">{{ humanize .Params.categories }}</span>
@@ -191,6 +193,7 @@
                                             </h3>
                                         </div>
                                     </div>
+
                                     <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                                         <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                             {{ if eq .Params.image "uploads/book.jpg" }}
@@ -202,6 +205,7 @@
                                         </div>
                                     </div>                               
                                 </div>
+
                                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                         <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>
@@ -233,13 +237,15 @@
                                                 <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">{{ .Title }}</a>
                                             </h3>
                                         </div>
-                                    </div>      
+                                    </div>
+     
                                     <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
-                                            <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                                                <img class="uk-image uk-responsive-height testimony-image" href="{{.Permalink}}" data-src="{{.Params.image}}" alt="{{ .Title }}'s Testimony" uk-img>
-                                            </div>
-                                        </div>                               
+                                        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                                            <img class="uk-image uk-responsive-height testimony-image" href="{{.Permalink}}" data-src="{{.Params.image}}" alt="{{ .Title }}'s Testimony" uk-img>
+                                        </div>
+                                    </div>                               
                                 </div>
+
                                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                                         <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>

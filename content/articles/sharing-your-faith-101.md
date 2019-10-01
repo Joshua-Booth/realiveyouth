@@ -2,7 +2,7 @@
 title: "Sharing Your Faith 101"
 categories: "evangelism"
 type: articles
-image: "uploads/book.jpg"
+image: "uploads/sharing-the-word.jpg"
 ---
 
 Maybe you’re afraid to share your faith because you don’t know what to say. Or maybe you’re sharing the Gospel but nothing is happening; people aren’t committing their lives to Christ. Are you doing something wrong?

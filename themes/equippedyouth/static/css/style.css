@@ -142,6 +142,35 @@
     .share {
         margin-left: calc(80% + 35px);
     }
+
+    .verse-post-image {
+        transform: translate(-50%,-57%) !important;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .verse-post-image {
+        transform: translate(-50%,-60%) !important;
+    }
+
+}
+
+@media (min-width: 1640px) {
+
+    .verse-post-image {
+        transform: translate(-50%,-62%) !important;
+    }
+
+}
+
+
+@media (min-width: 1920px) {
+
+    .verse-post-image {
+        transform: translate(-50%,-65%) !important;
+    }
+
 }
 
 /* Main Page Content Styles */
@@ -228,6 +257,14 @@
 
 .white {
     color: white !important;
+}
+
+#content {
+    min-height: 40vh;
+}
+
+.verse-font-size {
+    font-size: 1.4rem;
 }
 
 .content-spacing {
@@ -395,6 +432,13 @@
 
 .share div {
     margin-left: -4px;
+}
+
+.verse-post-image {
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 .fadeout {

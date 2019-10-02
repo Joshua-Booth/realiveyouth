@@ -332,6 +332,15 @@
     height: 91px;
 }
 
+.question-post-image {
+    max-width: 1173px;
+    max-height: 450px;
+}
+
+.whitesmoke-bg {
+    background-color: #F5F5F5;
+}
+
 .save {
     z-index: 10;
     position: relative;

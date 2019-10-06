@@ -377,8 +377,27 @@
     padding-bottom: 20px;
 }
 
+.page-title {
+    z-index: 10;
+    position: absolute;
+    padding-bottom: 40px;
+}
+
+.position-center {
+    right: 30% !important;
+    left: 30% !important;
+}
+
+.zoomed {
+    transform: scale(2) translateY(-20%) translateX(-20%);
+}
+
 .single-post-nav-button {
     z-index: 10;
+}
+
+.white-nav-button {
+    filter: brightness(100) !important;
 }
 
 .single-post-nav-button img {

@@ -5,7 +5,7 @@ layout: "about"
 
 ### The Manual
 
-The Equipped Youth Manual is an online resource for helping young Christians to live, serve and share their faith with others.
+The Realive Equipped Youth Manual is an online resource for helping young Christians to live, serve and share their faith with others.
 
 This website and web application is primarily designed for members of the Realive Youth group.
 

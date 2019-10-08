@@ -1,6 +1,6 @@
 baseURL = "https://realiveyouth.netlify.com/"
 languageCode = "en-us"
-title = "Equipped Youth Manual"
+title = "Realive Equipped Youth Manual"
 theme = "equippedyouth"
 
 [params]

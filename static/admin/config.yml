@@ -6,6 +6,26 @@ media_folder: "static/uploads"
 public_folder: "uploads"
 
 collections:
+ - name: "pages"
+   label: "Pages"
+   files:
+    - label: "About Page"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - {label: "Title", name: "title", widget: "string", required: true}
+        - {label: "Content", name: "body", widget: "markdown", required: true}
+    - label: "Contact Page"
+      name: "contact"
+      file: "content/contact.md"
+      fields:
+        - {label: "Title", name: "title", widget: "string", required: true}
+    - label: "Privacy Page"
+      name: "privacy"
+      file: "content/privacy.md"
+      fields:
+        - {label: "Title", name: "title", widget: "string", required: true}
+        - {label: "Content", name: "body", widget: "markdown", required: true}
  - name: "questions"
    label: "Questions"
    folder: "content/questions"

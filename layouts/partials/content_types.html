@@ -166,9 +166,9 @@
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if eq .Params.image "uploads/book.jpg" }}
-                            <img class="uk-image uk-responsive-height article-image blur" href="{{.Permalink}}" data-src="{{.Params.image}}" alt="{{ .Title }}" uk-img>
+                            <img class="uk-image uk-responsive-height article-image blur" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
                         {{ else }}
-                            <img class="uk-image uk-responsive-height article-image" href="{{.Permalink}}" data-src="{{.Params.image}}" alt="{{ .Title }}" uk-img>
+                            <img class="uk-image uk-responsive-height article-image" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
                         {{ end }}
 
                     </div>
@@ -210,7 +210,7 @@
 
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        <img class="uk-image uk-responsive-height testimony-image" href="{{.Permalink}}" data-src="{{.Params.image}}" alt="{{ .Title }}'s Testimony" uk-img>
+                        <img class="uk-image uk-responsive-height testimony-image" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}'s Testimony" uk-img>
                     </div>
                 </div>                               
             </div>

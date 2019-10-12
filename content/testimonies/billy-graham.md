@@ -1,6 +1,6 @@
 ---
 title: "Billy Graham"
-categories: "evangelism"
+categories: "share"
 type: testimonies
 image: "uploads/church.jpg"
 ---

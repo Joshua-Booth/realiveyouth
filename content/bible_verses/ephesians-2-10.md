@@ -1,6 +1,6 @@
 ---
 title: "Ephesians 2:10"
-categories: "evangelism"
+categories: "encourage"
 version: "niv"
 type: bible_verses
 ---

@@ -1,6 +1,6 @@
 ---
 title: "How can I tell others about Jesus?"
-categories: evangelism
+categories: "share"
 type: questions
 ---
 

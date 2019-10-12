@@ -1,6 +1,6 @@
 ---
 title: Are You a Good Person?
-categories: evangelism
+categories: "share"
 type: videos
 link:
   id: TCSUKIhjevo

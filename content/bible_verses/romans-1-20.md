@@ -1,6 +1,6 @@
 ---
 title: "Romans 1:20"
-categories: "evangelism"
+categories: "explain"
 version: "niv"
 type: bible_verses
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Ephesians 4:32"
-categories: "christian-living"
+categories: "deepen"
 version: "ESV"
 type: bible_verses
 ---

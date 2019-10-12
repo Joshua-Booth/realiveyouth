@@ -1,6 +1,6 @@
 ---
 title: "Psalm 75:1"
-categories: "worship"
+categories: "deepen"
 version: "NKJV"
 type: bible_verses
 ---

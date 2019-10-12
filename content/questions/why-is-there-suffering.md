@@ -1,6 +1,6 @@
 ---
 title: "Why is there suffering?"
-categories: "evangelism"
+categories: "explain"
 type: questions
 ---
 

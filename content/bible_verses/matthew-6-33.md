@@ -1,6 +1,6 @@
 ---
 title: "Matthew 6:33"
-categories: "christian-living"
+categories: "encourage"
 version: "niv"
 type: bible_verses
 ---

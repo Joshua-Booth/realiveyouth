@@ -192,6 +192,39 @@
     transform: rotateX(180deg);
 }
 
+.nav-container {
+    z-index: 10;
+    position:relative;
+    margin-top: -30px;
+    height: 80px;
+}
+
+.main-nav {
+    height: 60px;
+}
+
+.center-nav {
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.category-dropdown {
+    transform: translateY(-60px);
+    margin-top: -30px;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.inherit-width {
+    width: inherit;
+}
+
 #offcanvas-nav .uk-nav-header {
     padding-top: 8px;
     height: 50px;
@@ -381,11 +414,12 @@
     z-index: 10;
     position: absolute;
     padding-bottom: 40px;
+    width: 80%
 }
 
 .position-center {
-    right: 30% !important;
-    left: 30% !important;
+    right: 10% !important;
+    left: 10% !important;
 }
 
 .zoomed {

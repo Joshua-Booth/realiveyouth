@@ -1,6 +1,6 @@
 ---
 title: "John 3:16"
-categories: "evangelism"
+categories: "share"
 version: "niv"
 type: bible_verses
 ---

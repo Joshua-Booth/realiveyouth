@@ -1,6 +1,6 @@
 ---
 title: "Isaiah 53:6"
-categories: "evangelism"
+categories: "deepen"
 version: "nkjv"
 type: bible_verses
 ---

@@ -1,6 +1,6 @@
 ---
 title: Can We Trust the Bible?
-categories: evangelism
+categories: explain
 type: videos
 link:
   id: XyNseXdd260

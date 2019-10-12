@@ -1,6 +1,6 @@
 ---
 title: "1 Timothy 1:15"
-categories: "evangelism"
+categories: "encourage"
 version: "niv"
 type: bible_verses
 ---

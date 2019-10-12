@@ -1,6 +1,6 @@
 ---
 title: "Acts 4:12"
-categories: "evangelism"
+categories: "share"
 version: "niv"
 type: bible_verses
 ---

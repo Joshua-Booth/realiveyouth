@@ -1,6 +1,6 @@
 ---
 title: "John 3:3"
-categories: "evangelism"
+categories: "share"
 version: "nkjv"
 type: bible_verses
 ---

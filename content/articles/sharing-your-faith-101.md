@@ -1,6 +1,6 @@
 ---
 title: "Sharing Your Faith 101"
-categories: "evangelism"
+categories: "share"
 type: articles
 image: "uploads/sharing-the-word.jpg"
 ---

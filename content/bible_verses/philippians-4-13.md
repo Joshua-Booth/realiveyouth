@@ -1,6 +1,6 @@
 ---
 title: "Philippians 4:13"
-categories: "christian-living"
+categories: "encourage"
 version: "nkjv"
 type: bible_verses
 ---

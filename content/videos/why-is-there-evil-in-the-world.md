@@ -1,6 +1,6 @@
 ---
 title: Why Is There Evil in the World?
-categories: evangelism
+categories: explain
 type: videos
 link:
   id: gQ0whlNNWsM

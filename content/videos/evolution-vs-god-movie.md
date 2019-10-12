@@ -1,6 +1,6 @@
 ---
 title: Evolution Vs. God Movie
-categories: evangelism
+categories: "explain"
 type: videos
 link:
   id: U0u3-2CGOMQ

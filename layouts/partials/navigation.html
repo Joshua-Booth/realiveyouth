@@ -1,12 +1,21 @@
-<div class="uk-container">
-	<nav class="nav-scroll">
-		<ul class="uk-subnav uk-flex uk-flex-between uk-flex-nowrap uk-visible@s">
-			<li class="uk-active"><a href="{{.Site.BaseURL}}">Home</a></li>
-			<li><a href="{{.Site.BaseURL}}/categories/evangelism">Evangelism</a></li>
-			<li><a href="{{.Site.BaseURL}}/categories/christian-living">Christian Living</a></li>
-			<li><a href="{{.Site.BaseURL}}/categories/worship">Worship</a></li>
-			<li><a href="{{.Site.BaseURL}}/about">About</a></li>
-			<li><a href="{{.Site.BaseURL}}/contact">Contact</a></li>
+<div class="uk-container nav-container uk-visible@s">
+	<nav class="main-nav center-nav" uk-navbar>
+		<ul class="uk-subnav uk-navbar-nav uk-flex uk-flex-between uk-flex-nowrap inherit-width">
+			<li class="uk-active"><a class="display-flex" href="{{.Site.BaseURL}}">Home</a></li>
+			<li>
+				<a class="display-flex" href="#">Categories</a>
+				<div class="uk-navbar-dropdown category-dropdown">
+					<ul class="uk-nav uk-navbar-dropdown-nav">
+						<li><a href="{{.Site.BaseURL}}/categories/share">Share your Faith</a></li>
+						<li><a href="{{.Site.BaseURL}}/categories/encourage">Encourage your Faith</a></li>
+						<li><a href="{{.Site.BaseURL}}/categories/explain">Explain your Faith</a></li>
+						<li><a href="{{.Site.BaseURL}}/categories/deepen">Deepen your Faith</a></li>
+						<li><a href="{{.Site.BaseURL}}/categories/youth">Youth Group</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="display-flex" href="{{.Site.BaseURL}}/about">About</a></li>
+			<li><a class="display-flex" href="{{.Site.BaseURL}}/contact">Contact</a></li>
 		</ul>
 	</nav>
 </div>

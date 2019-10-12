@@ -1,6 +1,6 @@
 ---
 title: Days of Elijah
-categories: worship
+categories: "deepen"
 type: songs
 link: https://open.spotify.com/track/4XQjqlmEKPGOUcxupJj8hH
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Acts 2:38"
-categories: "evangelism"
+categories: "deepen"
 version: "niv"
 type: bible_verses
 ---

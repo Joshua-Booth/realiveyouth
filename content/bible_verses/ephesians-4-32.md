@@ -1,5 +1,6 @@
 ---
 title: "Ephesians 4:32"
+date: "2019-9-11"
 categories: "deepen"
 version: "ESV"
 type: bible_verses

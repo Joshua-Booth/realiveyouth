@@ -1,5 +1,6 @@
 ---
 title: "Billy Graham"
+date: "2019-9-11"
 categories: "share"
 type: testimonies
 image: "uploads/church.jpg"

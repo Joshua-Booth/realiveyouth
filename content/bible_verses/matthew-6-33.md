@@ -1,5 +1,6 @@
 ---
 title: "Matthew 6:33"
+date: "2019-9-29"
 categories: "encourage"
 version: "niv"
 type: bible_verses

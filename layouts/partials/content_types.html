@@ -132,7 +132,7 @@
 
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <span class="black">{{ humanize .Params.categories }}</span>
+                    <a href="{{.Site.BaseURL}}{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>
                 </div>
             </div>
 

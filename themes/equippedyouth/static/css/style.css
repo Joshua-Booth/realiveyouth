@@ -219,6 +219,9 @@
 
 /* Main Page Content Styles */
 
+* {
+    font-family: 'Lato', sans-serif !important;
+}
 
 #page-title {
     text-align: center

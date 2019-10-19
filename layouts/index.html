@@ -7,16 +7,90 @@
 {{ define "main" }}
     <!-- HERO -->
     <section class="uk-section uk-section-small">
-        <div class="uk-container">
-            <div class="uk-height-large uk-cover-container uk-border-rounded" style="border-radius: 40px">
-                <img src="https://picsum.photos/1300/500/?random" alt="Alt img" data-uk-cover>
-                <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
-                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        <a href="{{ .Site.BaseURL }}/questions/how-can-i-tell-others">
-                            <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">How can I tell others about Jesus?</h1>
-                        </a>
-                        <p>Here are some practical tips for sharing your faith with others.</p>
+        <div class="uk-container button-container">
+            <div class="slideshow-container">
+                {{ range $index, $element := first 5 (where .Site.RegularPages "Type" "in" site.Params.mainSections)}}
+                    <div class="slides uk-animation-slide-right-medium" id="slide-{{$index}}">
+                        <div class="uk-height-large uk-cover-container uk-border-rounded slide" >
+                            {{ $type := .Type }}
+                            {{ $title_colour := "black" }}
+                            {{ $image := "bible.jpg" }}
+                            {{ $blur := "false" }}
+
+                            {{ if eq $type "testimonies"}}
+                                {{ $type = "Testimony" }}
+                                {{ $title_colour = "white" }}
+                                {{ $image = "sharing-the-word.jpg" }}
+                            {{ else if eq $type "questions"}}
+                                {{ $image = "question.jpg" }}
+                            {{ else if eq $type "videos"}}
+                                {{ $title_colour = "white" }}
+                                {{ $image = "video.jpg" }}
+                            {{ else if eq $type "songs"}}
+                                {{ $title_colour = "white" }}
+                                {{ $image = "drums.jpg" }}
+                            {{ else if eq $type "articles"}}
+                                {{ $blur = "true" }}
+                                {{ $title_colour = "white" }}
+                                {{ $image = "book.jpg" }}
+                            {{ end }}
+
+                            {{ if eq $type .Type }}
+                                {{ $type = title (humanize (strings.TrimSuffix "s" .Type)) }}
+                            {{ end }}
+
+                            <a href="{{.Permalink}}">
+                                {{ if eq $blur "true" }}
+                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide blur slide-image" src="uploads/{{$image}}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide slide-image" src="uploads/{{$image}}" alt="{{ .Title }}">
+                                {{ end }}
+                            </a>
+                            <div class="uk-position-bottom uk-light uk-text-center">
+                                <div class="uk-overlay uk-light uk-text-center category no-top-margin">
+                                    <div class="uk-animation-slide-bottom-small">
+                                        <a href="{{ .Site.BaseURL}}{{ .Type }}"><span class="black">Featured {{ $type }}</span></a>
+                                    </div>
+                                </div>
+                                    
+                                <a href="{{ .Permalink }}">
+                                    <h1 class="slide-title {{$title_colour}} uk-text-left uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">{{ .Title }}</h1>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin slide">
+                            <div class="uk-animation-slide-bottom-small">
+                                    {{ $category := .Params.categories }}
+                                    {{ if eq $category "youth"}}
+                                        {{ $category = "Youth Group" }}
+                                    {{ else }}
+                                        {{ $category = print (humanize $category) " your Faith" }}
+                                    {{ end }}
+                                <a href="{{ .Site.BaseURL}}categories/{{ .Params.categories }}"><span class="slide-category black">{{ $category }}</span></a>
+                            </div>
+                        </div>
+                
+                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom save featured-save uk-border-circle slide">
+                            <div class="uk-animation-slide-bottom-small">
+                                <img class="uk-image" href="#" data-src="img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
+                            </div>
+                        </div>
+                
+                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom share featured-share uk-border-circle slide">
+                            <div class="uk-animation-slide-bottom-small">
+                                <img class="uk-image" href="#" data-src="img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
+                            </div>
+                        </div>
                     </div>
+                {{ end }}
+
+                <div class="dot-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
         </div>
@@ -24,16 +98,88 @@
 
     <!--CONTENT-->
     <div class="uk-section uk-section-default">
-        <div class="uk-container">
-            <div class="uk-grid uk-text-center" data-ukgrid>
-                <div id="home-content" class="uk-width-2-4@m">
-                {{.Content}}
-                {{range where .Site.RegularPages "Type" "in" site.Params.mainSections}}
-                    {{- partial "content_types.html" . -}}
-                {{end}}
+        <div class="uk-container button-container">
+            <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
+                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+                    <div>
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/share'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                            Share
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/encourage'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button">
+                            Encourage
+                        </button>
+                    </div>
+                </div>
+                <div class="navbutton-spacer"></div>
+                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+                    <div>
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/explain'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                            Explain
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                            Deepen
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="button-divider" />
+
+            <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
+                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+                    <div>
+                        <button disabled onclick="location.href='{{.Site.BaseURL}}/categories/youth'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button">
+                            Youth Group
+                        </button>
+                    </div>
+                </div>
+                <div class="navbutton-spacer"></div>
+                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+                    <div>
+                        <button disabled onclick="location.href='{{.Site.BaseURL}}/music'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                            Music
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--/CONTENT-->
+{{ end }}
+{{ define "footer" }}
+<script>
+    var slideIndex = 0;
+    showSlide();
+
+    function showSlide() {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        var slideImages = document.getElementsByClassName("slide-image");
+        var slideCategories = document.getElementsByClassName("slide-category");
+        
+        for (i = 0; i < slides.length; i++) {
+            slideImages[i].style.width = "100%";
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        slides[slideIndex-1].style.height = "100%";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlide, 10000); // Change slide every 10 seconds        
+    }
+</script>
 {{ end }}

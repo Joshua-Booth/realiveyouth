@@ -1,5 +1,6 @@
 ---
 title: "John 3:3"
+date: "2019-9-29"
 categories: "share"
 version: "nkjv"
 type: bible_verses

@@ -1,5 +1,6 @@
 ---
 title: Can We Trust the Bible?
+date: "2019-9-29"
 categories: explain
 type: videos
 link:

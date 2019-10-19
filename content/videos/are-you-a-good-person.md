@@ -1,5 +1,6 @@
 ---
 title: Are You a Good Person?
+date: "2019-9-15"
 categories: "share"
 type: videos
 link:

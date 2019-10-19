@@ -1,5 +1,6 @@
 ---
 title: "John 3:16"
+date: "2019-9-11"
 categories: "share"
 version: "niv"
 type: bible_verses

@@ -1,5 +1,6 @@
 ---
 title: "Romans 1:20"
+date: "2019-9-29"
 categories: "explain"
 version: "niv"
 type: bible_verses

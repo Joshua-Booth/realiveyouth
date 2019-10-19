@@ -1,5 +1,6 @@
 ---
 title: "Ephesians 2:10"
+date: "2019-9-11"
 categories: "encourage"
 version: "niv"
 type: bible_verses

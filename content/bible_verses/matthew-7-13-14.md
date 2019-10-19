@@ -1,5 +1,6 @@
 ---
 title: "Matthew 7:13-14"
+date: "2019-9-29"
 categories: "share"
 version: "niv"
 type: bible_verses

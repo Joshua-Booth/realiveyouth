@@ -1,5 +1,6 @@
 ---
 title: "Why is there suffering?"
+date: "2019-9-11"
 categories: "explain"
 type: questions
 ---

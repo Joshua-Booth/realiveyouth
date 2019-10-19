@@ -34,20 +34,15 @@
     <div class="uk-section uk-section-default">
         <div class="uk-container">
             <div class="uk-grid" data-ukgrid>
-                <!-- Content -->
                 <div class="uk-padding uk-flex uk-flex-bottom single-content-container content-spacing uk-flex-center">
-                    <article class="uk-section uk-section-small">
-                        {{.Content}}
-                        <iframe class="uk-text-center" src="https://open.spotify.com/embed/track/40lKptao1hxVqA7fd1OOGp" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                        {{- partial "SpotifySDK.html" . -}}
-                        
+                    <article class="uk-section uk-section-small">  
+                        <iframe class="uk-text-center" src={{ replace .Params.link "track" "embed/track" }} width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>   
                     </article>
                 </div>
                 <div class="uk-container content-spacing uk-section position-center">
-                    <div id='rg_embed_link_278056' class='rg_embed_link uk-align-center uk-padding uk-flex uk-flex-bottom position-center' data-song-id='278056'>Read <a href='https://genius.com/Chris-tomlin-our-god-lyrics'>“Our God” by Chris Tomlin</a> on Genius</div> 
-                    <script crossorigin src='//genius.com/songs/278056/embed.js'></script>
+                    {{.Content}}
+                    <iframe src="{{.Params.lyrics}}/embed?theme=light" style="border:none;background:transparent;" width="500px" height="620px" border=0></iframe>
                 </div>
-            
             </div>
         </div>
     </div>

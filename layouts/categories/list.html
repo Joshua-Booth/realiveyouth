@@ -27,11 +27,15 @@
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 			<!-- Page Title -->
-			{{ if eq .Title "youth"}}
-				<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{humanize .Title}} Group </h1>
+			{{ $title := .Title }}
+			{{ if eq $title "youth"}}
+				{{ $title = print $title " Group" }}
+			{{ else if eq $title "Categories"}}
+				{{ $title = print "Resource Categories" }}
 			{{ else }}
-				<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{humanize .Title}} your Faith</h1>
+				{{ $title = print (humanize $title) " your Faith" }}
 			{{ end }}
+			<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{$title}}</h1>
         </div>
     </div>
 	

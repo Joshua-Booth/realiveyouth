@@ -1,5 +1,6 @@
 ---
 title: "Psalm 75:1"
+date: "2019-9-11"
 categories: "deepen"
 version: "NKJV"
 type: bible_verses

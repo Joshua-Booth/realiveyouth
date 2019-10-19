@@ -1,5 +1,6 @@
 ---
 title: "Acts 4:12"
+date: "2019-9-29"
 categories: "share"
 version: "niv"
 type: bible_verses

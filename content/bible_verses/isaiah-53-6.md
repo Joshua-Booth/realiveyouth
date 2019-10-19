@@ -1,5 +1,6 @@
 ---
 title: "Isaiah 53:6"
+date: "2019-9-29"
 categories: "deepen"
 version: "nkjv"
 type: bible_verses

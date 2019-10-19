@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Equipped Youth Manual</title>
+    {{- partial "head.html" . -}}
+  </head>
+  <body>
+    <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
+    
+    {{- partial "navigation.html" . -}}
+
+    <!-- Header Image -->
+    <div class="uk-cover-container uk-width-1-1 uk-height-large">
+        <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
+            <!-- Mobile Navigation -->
+            <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
+              <img class="uk-navbar-toggle navbutton white-nav-button uk-hidden@s" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}/img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img>
+            </div>
+        </div>
+        <img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-mountain-landscape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+        <img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-mountain-landscape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+    </div>
+
+    <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
+        <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+            <!-- Page Title -->
+            <h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{.Title}}</h1>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default">
+        <div class="uk-container">
+            <div class="uk-grid" data-ukgrid>
+                <!-- Content -->
+                <div class="uk-padding uk-flex uk-flex-bottom single-content-container content-spacing uk-flex-center">
+                    <article class="uk-section uk-section-small">
+                        {{.Content}}
+                        <iframe class="uk-text-center" src="https://open.spotify.com/embed/track/40lKptao1hxVqA7fd1OOGp" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        {{- partial "SpotifySDK.html" . -}}
+                        
+                    </article>
+                </div>
+                <div class="uk-container content-spacing uk-section position-center">
+                    <div id='rg_embed_link_278056' class='rg_embed_link uk-align-center uk-padding uk-flex uk-flex-bottom position-center' data-song-id='278056'>Read <a href='https://genius.com/Chris-tomlin-our-god-lyrics'>“Our God” by Chris Tomlin</a> on Genius</div> 
+                    <script crossorigin src='//genius.com/songs/278056/embed.js'></script>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+            
+    {{ block "footer" . }}{{ end }}
+    {{- partial "mobilenav.html" . -}}
+    {{- partial "offcanvas.html" . -}}
+    {{- partial "footer.html" . -}}
+
+    <script>
+    if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+        if (!user) {
+        window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+        });
+        }
+    });
+    }
+    </script>
+</body>
+</html>

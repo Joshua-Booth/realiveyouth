@@ -21,6 +21,11 @@
         margin-top: -20px;
     }
 
+    .song-lyrics {
+        width: 100%;
+        padding-right: 0px;
+    }
+
     .video-width {
         width: 100% !important;
     }
@@ -72,6 +77,12 @@
         margin-top: 0px;
     }
 
+    .song-lyrics {
+        width: 100%;
+        max-width: 500px;
+        padding-right: 0px;
+    }
+
     .video-width {
         width: 100% !important;
     }
@@ -121,6 +132,12 @@
 
     .verse-inside-padding p {
         margin-top: -10px;
+    }
+
+    .song-lyrics {
+        width: 85%;
+        max-width: 500px;
+        padding-right: 0px;
     }
 
     .video-width {
@@ -202,6 +219,7 @@
 
 /* Main Page Content Styles */
 
+
 #page-title {
     text-align: center
 }
@@ -215,6 +233,9 @@
     right: unset;
     -webkit-filter: brightness(0);
     filter: brightness(0);
+}
+
+.flip {
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
 }
@@ -538,6 +559,19 @@
     margin-left: auto;
     right: 0;
     display: inline-block;
+}
+
+.song-track-container {
+    padding: 30px 0px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.song-lyrics {
+    border: none;
+    background:transparent;
+    height: 600px;
 }
 
 .share img, .save img, .single-post-share img, .single-post-save img {

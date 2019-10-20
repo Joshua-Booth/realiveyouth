@@ -577,6 +577,20 @@
     height: 600px;
 }
 
+#footer a {
+    margin-right: 4px;
+}
+
+.footer-copyright {
+    margin: 0;
+    display:inline-block;
+    width:80%
+}
+
+.mobile-padder {
+    padding-top: 100px
+}
+
 .share img, .save img, .single-post-share img, .single-post-save img {
     height: 16.6px;
 }

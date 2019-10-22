@@ -308,6 +308,8 @@
 
 #fixedBottomNav {
     background-color: white !important;
+    z-index: 10;
+    box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.19);
 }
 
 #privacy-link, #copyright {
@@ -588,7 +590,7 @@
 }
 
 .mobile-padder {
-    padding-top: 100px
+    padding-top: 80px
 }
 
 .share img, .save img, .single-post-share img, .single-post-save img {

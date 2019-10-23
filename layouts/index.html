@@ -39,7 +39,19 @@
                                 {{ $type = title (humanize (strings.TrimSuffix "s" .Type)) }}
                             {{ end }}
 
-                            <a href="{{.Permalink}}">
+                            {{ $link := .Permalink }}
+                            {{ $rel := "" }}
+                            {{ $target := "_self" }}
+
+                            {{ if not (isset .Params "link" ) | or (eq .Params.link "" ) }}
+                                {{ $link = .Permalink }}
+                            {{ else }}
+                                {{ $link = .Params.link }}
+                                {{ $rel = "nofollow" }}
+                                {{ $target = "_blank"}}
+                            {{ end }}
+
+                            <a href="{{ $link }}" rel="{{ $rel }}" target="{{ $target }}">
                                 {{ if eq $blur "true" }}
                                     <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide blur slide-image" src="uploads/{{$image}}" alt="{{ .Title }}">
                                 {{ else }}
@@ -52,8 +64,8 @@
                                         <a href="{{ .Site.BaseURL}}{{ .Type }}"><span class="black">Featured {{ $type }}</span></a>
                                     </div>
                                 </div>
-                                    
-                                <a href="{{ .Permalink }}">
+                                
+                                <a href="{{ $link }}" rel="{{ $rel }}" target="{{ $target }}">
                                     <h1 class="slide-title {{$title_colour}} uk-text-left uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">{{ .Title }}</h1>
                                 </a>
                             </div>

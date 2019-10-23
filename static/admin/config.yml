@@ -75,7 +75,8 @@ collections:
     - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
     - {label: Type, name: type, widget: hidden, default: "articles"}
     - {label: "Header Image", name: "image", widget: image, default: "uploads/book.jpg", required: false, allow_multiple: false}
-    - {label: "Content", name: "body", widget: "markdown", required: true}
+    - {label: "Text Content", name: "body", widget: "markdown", required: true}
+    - {label: "URL", name: "link", widget: "string", required: false}
 
  - name: "songs"
    label: "Songs"

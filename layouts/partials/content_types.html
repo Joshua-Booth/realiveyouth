@@ -157,20 +157,24 @@
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left article-header">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                        {{ $title_colour := "black" }}
+                        {{ if or (eq .Params.image "uploads/book.jpg") (eq .Params.image "") }}
+                        {{ else }}
+                            {{ $title_colour = "white" }}
+                        {{ end }}
                         <h3 class="post-header">
-                            <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">{{ .Title }}</a>
+                            <a title="{{.Title}}" class="{{$title_colour}}" href="{{.Permalink}}">{{ .Title }}</a>
                         </h3>
                     </div>
                 </div>
 
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        {{ if eq .Params.image "uploads/book.jpg" }}
-                            <img class="uk-image uk-responsive-height article-image blur" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
+                        {{ if or (eq .Params.image "uploads/book.jpg") (eq .Params.image "") }}
+                            <img class="uk-image uk-responsive-height article-image blur" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}uploads/book.jpg" alt="{{ .Title }}" uk-img>
                         {{ else }}
                             <img class="uk-image uk-responsive-height article-image" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
                         {{ end }}
-
                     </div>
                 </div>                               
             </div>

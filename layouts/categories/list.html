@@ -87,6 +87,9 @@
 								{{ end }}
 							</ul>
 						</div>
+					
+						{{- partial "filter.html" . -}}
+
 					{{ else }}
 						<div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
 							<div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
@@ -125,7 +128,6 @@
 	{{ block "footer" . }}{{ end }}
 	
 	{{- partial "mobilenav.html" . -}}
-	{{- partial "filter.html" . -}}
 	{{- partial "offcanvas.html" . -}}
 	{{- partial "footer.html" . -}}
 

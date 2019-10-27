@@ -394,11 +394,92 @@
 .content-section {
     vertical-align: top;
     margin-bottom:60px !important;
+    width: 100% !important;
 }
 
 .content-section .uk-container {
     height: 100%;
     border-radius: 20px;
+}
+
+.filter-button svg {
+    height: 40px;
+    width: 40px;
+    margin-top: -2px;
+}
+
+#category-content {
+    background: white;
+    margin-top: -25px;
+}
+
+
+.filter-controls {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1010;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px 15px;
+    background: rgba(0,0,0,.6);
+    transition: opacity .15s linear;
+    padding-left: 45px;
+}
+
+#filter-container div {
+    opacity: 1;
+    transform: none !important;
+}
+
+#no-filter-content {
+    display: none;
+}
+
+#set-filter {
+    padding-bottom: 80px;
+    padding-left: 5px;
+    margin-top: -50px;
+}
+
+#set-filter span {
+    background-color: #000000;
+    margin-left: 10px;
+    padding: 10px;
+    width: auto;
+}
+
+.filter {
+    background-color: transparent !important;
+    height: 80px
+}
+
+.filter div {
+    margin-right: 16px;
+    width: 24px;
+    padding:16px;
+    height: 24px;
+    background-color: #000000;
+}
+
+.mobile-filter {
+    z-index: 10;
+}
+
+.desktop-filter {
+    z-index: 0;
+}
+
+.mobile-filter div {
+    top: 0%;
+    box-sizing: initial;
+}
+
+.desktop-filter div {
+    z-index: 0;
+    box-shadow: 0 6px 10px 0 #666;
 }
 
 .reference {
@@ -490,9 +571,9 @@
 
 .page-title {
     z-index: 10;
-    position: absolute;
     padding-bottom: 40px;
-    width: 80%
+    width: 80%;
+    margin: 0 auto;
 }
 
 .position-center {

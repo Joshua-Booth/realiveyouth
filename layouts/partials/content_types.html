@@ -1,4 +1,5 @@
 {{ if or (eq .File.Dir "bible_verses/") (eq .File.Dir "bible_verses\\") }}
+<li data-type="verse">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom reference">
@@ -49,9 +50,11 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}
 
 {{ if or (eq .File.Dir "questions/") (eq .File.Dir "questions\\") }}
+<li data-type="question">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom question-post-height border-rounded uk-box-shadow-large">
@@ -83,9 +86,11 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}
 
 {{ if or (eq .File.Dir "songs/") (eq .File.Dir "songs\\") }}
+<li data-type="song">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large">
@@ -113,9 +118,11 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}
 
 {{ if or (eq .File.Dir "videos/") (eq .File.Dir "videos\\") }}
+<li data-type="video">
     <section class="video uk-section uk-section-small uk-display-inline-block uk-margin-remove video-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
@@ -149,9 +156,11 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}
 
 {{ if or (eq .File.Dir "articles/") (eq .File.Dir "articles\\") }}
+<li data-type="article">
     <section class="article uk-section uk-section-small uk-display-inline-block uk-margin-remove article-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
@@ -198,9 +207,11 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}
 
 {{ if or (eq .File.Dir "testimonies/") (eq .File.Dir "testimonies\\") }}
+<li data-type="testimony">
     <section class="testimony uk-section uk-section-small uk-display-inline-block uk-margin-remove testimony-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
@@ -238,4 +249,5 @@
             </div>
         </div>
     </section>
+</li>
 {{ end }}

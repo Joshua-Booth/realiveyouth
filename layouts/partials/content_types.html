@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="uk-height-small uk-cover-container border-rounded uk-box-shadow-large">
+            <div class="uk-height-small uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-position-cover uk-flex uk-flex-top uk-light uk-text-center uk-text-secondary verse-inside-padding uk-overflow-hidden">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if le (len .Content) 120 }}
@@ -32,7 +32,9 @@
             <div class="verse-container">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        <span class="black">{{ humanize .Params.categories }}</span>
+                        <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                            <span class="black">{{ humanize .Params.categories }}</span>
+                        </a>
                     </div>
                 </div>
 
@@ -57,7 +59,7 @@
 <li data-type="question">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
-            <div class="uk-overlay uk-light uk-text-left uk-text-bottom question-post-height border-rounded uk-box-shadow-large">
+            <div class="uk-overlay uk-light uk-text-left uk-text-bottom question-post-height border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <h3 class="post-header black">
                         <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
@@ -69,7 +71,9 @@
 
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <span class="black">{{ humanize .Params.categories }}</span>
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
                 </div>
             </div>
 
@@ -93,7 +97,7 @@
 <li data-type="song">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
-            <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large">
+            <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <iframe src={{ replace .Params.link "track" "embed/track" }} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
@@ -101,7 +105,9 @@
 
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <span class="black">{{ humanize .Params.categories }}</span>
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
                 </div>
             </div>
 
@@ -125,7 +131,7 @@
 <li data-type="video">
     <section class="video uk-section uk-section-small uk-display-inline-block uk-margin-remove video-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
-            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
+            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-padding-remove uk-flex uk-light white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small" class="uk-width-1-1">
                         <a title="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
@@ -139,7 +145,9 @@
 
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <a href="{{.Site.BaseURL}}{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
                 </div>
             </div>
 
@@ -163,7 +171,7 @@
 <li data-type="article">
     <section class="article uk-section uk-section-small uk-display-inline-block uk-margin-remove article-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
-            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
+            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left article-header">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ $title_colour := "black" }}
@@ -180,17 +188,19 @@
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if or (eq .Params.image "uploads/book.jpg") (eq .Params.image "") }}
-                            <img class="uk-image uk-responsive-height article-image blur" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}uploads/book.jpg" alt="{{ .Title }}" uk-img>
+                            <img class="uk-image uk-responsive-height article-image blur" data-src="{{.Site.BaseURL}}uploads/book.jpg" alt="{{ .Title }}" uk-img>
                         {{ else }}
-                            <img class="uk-image uk-responsive-height article-image" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
+                            <img class="uk-image uk-responsive-height article-image" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}" uk-img>
                         {{ end }}
                     </div>
-                </div>                               
+                </div>         
             </div>
-
+            
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
                 </div>
             </div>
 
@@ -214,7 +224,7 @@
 <li data-type="testimony">
     <section class="testimony uk-section uk-section-small uk-display-inline-block uk-margin-remove testimony-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
-            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large">
+            <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left testimony-header">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         <h3 class="post-header white">
@@ -232,7 +242,9 @@
 
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}"><span class="black">{{ humanize .Params.categories }}</span></a>
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
                 </div>
             </div>
 

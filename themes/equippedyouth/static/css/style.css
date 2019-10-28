@@ -465,7 +465,7 @@
 }
 
 .mobile-filter {
-    z-index: 10;
+    z-index: 11;
 }
 
 .desktop-filter {
@@ -751,6 +751,10 @@
 
 .active {
     background-color: #717171;
+}
+
+.pointer-cursor {
+    cursor: pointer;
 }
 
 .fadeout {

@@ -51,3 +51,11 @@ document.addEventListener('keyup', function(e) {
         filterContainer.setAttribute("hidden", "");
     }
 });
+
+function copyLink(copyText) {
+    navigator.clipboard.writeText(copyText).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+}

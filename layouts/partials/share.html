@@ -1,0 +1,13 @@
+<div id="share-modal" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-text-center">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3>Share</h3>
+        <hr>
+        <button class="uk-button uk-button-secondary uk-width-1-2 uk-margin uk-margin-remove-top" onclick="copyLink('{{ .Permalink }}');">Copy Link</button>
+        <hr class="uk-invisible">
+        <a class="uk-margin-small-right" href="https://facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" uk-icon="facebook"></a>
+        <a class="uk-margin-small-right" href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" uk-icon="twitter"></a>
+        <a class="uk-margin-small-right" href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink }}" target="_blank" uk-icon="mail"></a>
+        <a class="uk-margin-small-right uk-hidden@m " href="sms:?&amp;body={{ .Permalink }}" target="_blank" uk-icon="commenting"></a>
+    </div>
+</div>

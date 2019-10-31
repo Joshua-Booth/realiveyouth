@@ -4,7 +4,7 @@ date: '2019-10-31'
 categories: explain
 type: articles
 image: /uploads/federico-beccari-477296.jpg
-link: 'https://www.exploregod.com/did-the-resurrection-happen'
+link: ''
 ---
 ## Was Jesus Resurrected?
 

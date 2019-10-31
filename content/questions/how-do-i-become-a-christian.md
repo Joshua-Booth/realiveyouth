@@ -20,7 +20,7 @@ _Dear God,_
 
 _I know that I have not lived as You want me to. I have not loved You as I ought nor loved the people who live around me. I am sorry and want to change._
 
-_Thank you for Jesus. Thank you that H_2. Pray. Prayer is your way of speaking with God and expressing your thanks and dependence on Him.  Talk to Him about everything - how you feel, how you are going and so on. Prayer is powerful (it doesn’t seem like it) but God hears and acts on our prayers._e lived and died for me and rose again and is the Lord._
+_Thank you for Jesus. Thank you that He lived and died for me and rose again and is the Lord._
 
 _Please forgive me and help me to live as you want me to._
 
@@ -33,7 +33,5 @@ Yet when you do this God responds! He sends his Holy Spirit upon you to transfor
 Once you have taken this step there are many things that you can do to help. The three most important are :
 
 1. Continue to read God’s word. The work of God’s Spirit is to help you understand more and more about God and Jesus and He does this through helping you to understand the bible. So read it and ask God to help you understand it.
-
 2. Pray. Prayer is your way of speaking with God and expressing your thanks and dependence on Him.  Talk to Him about everything - how you feel, how you are going and so on. Prayer is powerful (it doesn’t seem like it) but God hears and acts on our prayers.
-
 3. Meet with other Christians.  They will be able to help you as you start out on your walk with God. Visit your local church, ask around your neighborhood or work (you’ll be surprised where you will find other Christians) and tell them about what you have done.

@@ -466,6 +466,9 @@
 
 .mobile-filter {
     z-index: 11;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .desktop-filter {

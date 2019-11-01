@@ -85,6 +85,7 @@ collections:
    slug: "{{slug}}"
    fields:
     - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Layout", name: "layout", widget: "hidden", default: "song"}
     - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
     - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
     - {label: Type, name: type, widget: hidden, default: "songs"}

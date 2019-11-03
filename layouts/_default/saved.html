@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Saved Posts - Realive Equipped Youth Manual</title>
+    {{- partial "head.html" . -}}
+  </head>
+  <body>
+    <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
+    
+    {{- partial "navigation.html" . -}}
+
+    <!-- Header -->
+    <div class="uk-cover-container uk-width-1-1 uk-height-large">
+        <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
+            <!-- Mobile Navigation -->
+            <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
+              <img class="uk-navbar-toggle navbutton white-nav-button uk-hidden@s" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}/img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img>
+            </div>
+        </div>
+        <!-- Header Image -->
+        <img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+        <img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+    </div>
+
+    <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
+        <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+			<!-- Page Title -->
+			<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{ .Title }}</h1>
+        </div>
+    </div>
+	
+	<!--CONTENT-->
+    <div class="uk-section uk-section-default">
+		<div class="uk-container">
+			<div class="uk-grid uk-text-center" data-ukgrid>
+				<div id="content" class="uk-width-2-4@m">
+                    <div id="filter" uk-filter="target: .js-filter">
+                        <div id="filter-container" class="uk-grid-small uk-grid-divider uk-child-width-auto filter-controls" hidden uk-grid>
+                            <div id="filter-dialog" class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                                <h2 class="uk-modal-title uk-text-center">Filter Resources</h2>
+                                <button class="uk-modal-close-default filter-button" type="button" data-uk-icon="close" uk-toggle="target: #filter-container"></button>
+                                
+                                <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+                                    <div>
+                                        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                            <li onclick="setFilter('all'); " class="uk-active" uk-filter-control><a href="#">All</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                            <li onclick="setFilter('articles');" uk-filter-control="filter: [data-type='articles']; group: data-type"><a href="#">Articles</a></li>
+                                            <li onclick="setFilter('verses');" uk-filter-control="filter: [data-type='bible_verse']; group: data-type"><a href="#">Verses</a></li>
+                                            <li onclick="setFilter('videos');" uk-filter-control="filter: [data-type='videos']; group: data-type"><a href="#">Videos</a></li>
+                                            <li onclick="setFilter('songs');" uk-filter-control="filter: [data-type='songs']; group: data-type"><a href="#">Songs</a></li>
+                                            <li onclick="setFilter('testimonies');" uk-filter-control="filter: [data-type='testimonies']; group: data-type"><a href="#">Testimonies</a></li>
+                                            <li onclick="setFilter('questions');" uk-filter-control="filter: [data-type='questions']; group: data-type"><a href="#">Questions</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="set-filter" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-left">
+                            Filter: <span class="uk-badge pointer-cursor" uk-toggle="target: #filter-container">All</span>
+                        </div>
+
+                        <div id="no-filter-content" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-top-small">
+                            No saved posts found.
+                        </div>
+
+                        <!-- Saved Posts -->
+                        <ul id="category-content" class="js-filter uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-bottom-small saved-content" uk-grid>
+                        </ul>                            
+                    </div>
+
+                    {{- partial "filter.html" . -}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/CONTENT-->
+
+	{{ block "footer" . }}{{ end }}
+	
+	{{- partial "mobilenav.html" . -}}
+	{{- partial "offcanvas.html" . -}}
+	{{- partial "footer.html" . -}}
+
+    <!-- Saved Post Share Modal -->
+    <div id="share-modal" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-text-center">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h3>Share</h3>
+            <hr>
+            <button id="link-share" class="uk-button uk-button-secondary uk-width-1-2 uk-margin uk-margin-remove-top" onclick="copyLink('{{ .Permalink }}');">Copy Link</button>
+            <hr class="uk-invisible">
+            <a id="facebook-share" class="uk-margin-small-right" href="https://facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" uk-icon="facebook"></a>
+            <a id="twitter-share" class="uk-margin-small-right" href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" uk-icon="twitter"></a>
+            <a id="email-share" class="uk-margin-small-right" href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink }}" target="_blank" uk-icon="mail"></a>
+            <a id="sms-share" class="uk-margin-small-right uk-hidden@m " href="sms:?&amp;body={{ .Permalink }}" target="_blank" uk-icon="commenting"></a>
+        </div>
+    </div>
+
+	<script>
+	if (window.netlifyIdentity) {
+	window.netlifyIdentity.on("init", user => {
+		if (!user) {
+		window.netlifyIdentity.on("login", () => {
+			document.location.href = "/admin/";
+		});
+		}
+	});
+	}
+    </script>
+    
+    <script>
+        loadSavedPosts();
+    </script>
+</body>
+</html>

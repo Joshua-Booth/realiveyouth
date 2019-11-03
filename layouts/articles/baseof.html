@@ -47,7 +47,7 @@
       
       {{ if eq .Params.link "" }}
         <!-- Save Button -->
-        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save">
+        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
           <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Save.svg" width="30px" height="30px" alt="Save" uk-img>
         </div>
 

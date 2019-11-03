@@ -76,7 +76,7 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "articles"}
     - {label: "Header Image", name: "image", widget: image, default: "uploads/book.jpg", required: false, allow_multiple: false}
     - {label: "Text Content", name: "body", widget: "markdown", required: true}
-    - {label: "URL", name: "link", widget: "string", required: false}
+    - {label: "URL", name: "link", widget: "string", default: "", required: false}
 
  - name: "songs"
    label: "Songs"

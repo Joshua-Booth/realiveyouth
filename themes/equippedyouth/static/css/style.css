@@ -730,6 +730,11 @@
     height: 600px;
 }
 
+.video-header {
+    height: 250%;
+    transform: translate(-50%, -60%) !important;
+}
+
 #footer a {
     margin-right: 4px;
 }

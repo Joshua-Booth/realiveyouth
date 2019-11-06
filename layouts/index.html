@@ -46,7 +46,11 @@
                             {{ if not (isset .Params "link" ) | or (eq .Params.link "" ) }}
                                 {{ $link = .Permalink }}
                             {{ else }}
-                                {{ $link = .Params.link }}
+                                {{ if eq $type "Video"}}
+                                    {{ $link = .Params.link.url }}
+                                {{ else }}
+                                    {{ $link = .Params.link }}
+                                {{ end }}
                                 {{ $rel = "nofollow" }}
                                 {{ $target = "_blank"}}
                             {{ end }}

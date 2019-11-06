@@ -1,0 +1,17 @@
+{{ define "metadata" }}
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Realive Equipped Youth Manual</title>
+{{ end }}
+{{ define "main" }}
+    <article class="uk-article uk-align-center uk-padding uk-padding-remove-top single-content-width">
+        <p class="uk-article-meta">
+            {{ if eq .Params.link.url "" }}
+                {{ .Content }}
+            {{ else }}
+                <h2>Please wait while we redirect you to your video.</h2>
+            {{ end }}
+        </p>
+    </article>
+{{ end }}

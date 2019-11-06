@@ -47,6 +47,10 @@
         margin-left: 0 !important;
     }
 
+    .error-page-title {
+        top: 15vh;
+    }
+
     .save {
         margin-left: 65%;
     }
@@ -102,6 +106,10 @@
 
     .button-grid-container {
         margin-left: 0 !important;
+    }
+
+    .error-page-title {
+        top: 15vh;
     }
 
     .save {
@@ -161,6 +169,10 @@
         margin-left: -30px;
     }
 
+    .error-page-title {
+        top: 25vh;
+    }
+
     .save {
         margin-left: 73%;
     }
@@ -177,6 +189,10 @@
 
     .testimony-width, .article-width {
         width: 49%;
+    }
+
+    .error-page-title {
+        top: 280px;
     }
 
     .save {
@@ -357,6 +373,10 @@
     min-height: 40vh;
 }
 
+.content-404 {
+    margin-top: -50px;
+}
+
 .verse-font-size {
     font-size: 1.4rem;
 }
@@ -533,6 +553,10 @@
     background-color: #F5F5F5;
 }
 
+.black-bg {
+    background-color: black !important;
+}
+
 .save {
     z-index: 10;
     position: relative;
@@ -584,6 +608,35 @@
     z-index: 10;
     position: absolute;
     padding-bottom: 20px;
+}
+
+.auto-side-margins {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.error-page-title {
+    position: absolute;
+    display: block;
+    text-align: center;
+    right: 5%;
+    left: 5%;
+}
+
+.error-page-title h1 {
+    font-size: 8rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.error-page-subtitle {
+    position: initial;
+    margin-bottom: 60px;
+}
+
+.return-back-button {
+    height:40px
 }
 
 .page-title {

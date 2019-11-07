@@ -11,6 +11,9 @@
             <div class="slideshow-container">
                 {{ range $index, $element := first 5 (where .Site.RegularPages "Type" "in" site.Params.mainSections)}}
                     <div class="slides uk-animation-slide-right-medium" id="slide-{{$index}}">
+                        <span hidden>{{.Type}}</span>
+                        <span hidden>{{.File.BaseFileName}}</span>
+
                         <div class="uk-height-large uk-cover-container uk-border-rounded slide" >
                             {{ $type := .Type }}
                             {{ $title_colour := "black" }}
@@ -77,13 +80,15 @@
                         
                         <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin slide">
                             <div class="uk-animation-slide-bottom-small">
-                                    {{ $category := .Params.categories }}
-                                    {{ if eq $category "youth"}}
-                                        {{ $category = "Youth Group" }}
-                                    {{ else }}
-                                        {{ $category = print (humanize $category) " your Faith" }}
-                                    {{ end }}
-                                <a href="{{ .Site.BaseURL}}categories/{{ .Params.categories }}"><span class="slide-category black">{{ $category }}</span></a>
+                                {{ $category := .Params.categories }}
+                                {{ if eq $category "youth"}}
+                                    {{ $category = "Youth Group" }}
+                                {{ else }}
+                                    {{ $category = print (humanize $category) " your Faith" }}
+                                {{ end }}
+                                <a href="{{ .Site.BaseURL}}categories/{{ .Params.categories }}">
+                                    <span class="slide-category black">{{ $category }}</span>
+                                </a>
                             </div>
                         </div>
                 
@@ -100,7 +105,6 @@
                                 </div>
                             </div>
                         </a>
-                        {{- partial "share.html" . -}}
                     </div>
                 {{ end }}
 
@@ -114,8 +118,24 @@
             </div>
         </div>
     </section>
+    <!-- /HERO -->
 
-    <!--CONTENT-->
+    <!-- Saved Post Share Modal -->
+    <div id="share-modal" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-text-center">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h3>Share</h3>
+            <hr>
+            <button id="link-share" class="uk-button uk-button-secondary uk-width-1-2 uk-margin uk-margin-remove-top" onclick="copyLink('{{ .Permalink }}');">Copy Link</button>
+            <hr class="uk-invisible">
+            <a id="facebook-share" class="uk-margin-small-right" href="https://facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" uk-icon="facebook"></a>
+            <a id="twitter-share" class="uk-margin-small-right" href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" uk-icon="twitter"></a>
+            <a id="email-share" class="uk-margin-small-right" href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink }}" target="_blank" uk-icon="mail"></a>
+            <a id="sms-share" class="uk-margin-small-right uk-hidden@m " href="sms:?&amp;body={{ .Permalink }}" target="_blank" uk-icon="commenting"></a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
     <div class="uk-section uk-section-default">
         <div class="uk-container button-container">
             <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
@@ -167,7 +187,7 @@
             </div>
         </div>
     </div>
-    <!--/CONTENT-->
+    <!-- /CONTENT -->
 {{ end }}
 {{ define "footer" }}
 <script>
@@ -198,7 +218,12 @@
         slides[slideIndex-1].style.display = "block";
         slides[slideIndex-1].style.height = "100%";
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlide, 10000); // Change slide every 10 seconds        
+
+        var postType = slides[slideIndex-1].children[0].innerText;
+        var postName = slides[slideIndex-1].children[1].innerText;
+
+        shareSavedPost(postType, postName);
+        setTimeout(showSlide, 8000); // Change slide every 8 seconds        
     }
 </script>
 {{ end }}

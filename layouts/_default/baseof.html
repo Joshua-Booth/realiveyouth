@@ -15,11 +15,11 @@
     {{ block "main" . }}
     {{ end }}
     </div>
-  
-    {{ block "footer" . }}{{ end }}
+
     {{- partial "mobilenav.html" . -}}
     {{- partial "offcanvas.html" . -}}
     {{- partial "footer.html" . -}}
+    {{ block "footer" . }}{{ end }}
 
     <script>
         if (window.netlifyIdentity) {

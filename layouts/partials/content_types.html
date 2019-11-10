@@ -245,7 +245,11 @@
 
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-                        <img class="uk-image uk-responsive-height testimony-image" href="{{.Permalink}}" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }}'s Testimony" uk-img>
+                        {{ if or (eq .Params.image "uploads/sharing-the-word.jpg") (eq .Params.image "") }}
+                            <img class="uk-image uk-responsive-height article-image blur" data-src="{{.Site.BaseURL}}uploads/sharing-the-word.jpg" alt="{{ .Title }} - Testimony" uk-img>
+                        {{ else }}
+                            <img class="uk-image uk-responsive-height article-image" data-src="{{.Site.BaseURL}}{{.Params.image}}" alt="{{ .Title }} - Testimony" uk-img>
+                        {{ end }}
                     </div>
                 </div>                               
             </div>

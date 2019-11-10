@@ -2,6 +2,7 @@ baseURL = "https://realiveyouth.netlify.com/"
 languageCode = "en-us"
 title = "Realive Equipped Youth Manual"
 theme = "equippedyouth"
+googleAnalytics = "UA-151959494-1"
 
 [params]
   mainSections = ["bible_verses", "questions", "songs", "testimonies", "articles", "videos"]

@@ -2,7 +2,7 @@
 	<div class="uk-container">
 		<nav id="navbar" class="white-background" data-uk-navbar="mode: click;">
 			<div class="uk-navbar-left nav-overlay top-nav">
-				<img class="uk-navbar-toggle navbutton uk-hidden@m" data-uk-toggle href="#offcanvas-nav"  data-src="img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img style="filter:brightness(0)">
+				<img class="uk-navbar-toggle navbutton uk-hidden@m" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img style="filter:brightness(0)">
 			</div>
 			<div id="page-title" class="uk-navbar-center nav-overlay top-nav">
 				<a class="uk-navbar-item uk-logo" href="{{.Site.BaseURL}}" title="Logo">Realive Equipped Youth Manual</a>
@@ -10,7 +10,7 @@
 			<div class="uk-navbar-right nav-overlay top-nav">
 				<div class="uk-navbar-item uk-visible@s">
 					<a href="{{ .Site.BaseURL}}saved" style="margin-right: 10px">
-						<img class="uk-image" href="#" data-src="img/Save.svg" width="15px" height="15px" alt="Save" uk-img>
+						<img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="15px" height="15px" alt="Save" uk-img>
 					</a>
 					<a class="uk-navbar-toggle uk-padding-remove" style="margin-right: 4px" data-uk-search-icon data-uk-toggle="target: .top-nav; animation: uk-animation-fade" href="#"></a>
 				</div>

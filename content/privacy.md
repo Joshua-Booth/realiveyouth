@@ -6,7 +6,7 @@ layout: "privacy"
 <h1>Our Privacy Policy</h1>
 
 
-<p>Effective date: October 8, 2019</p>
+<p>Effective date: November 10, 2019</p>
 
 
 <p>Realive Equipped Youth Manual ("us", "we", or "our") operates the https://realiveyouth.netlify.com/ website and the Realive Equipped Youth Manual mobile application (the "Service").</p>
@@ -27,7 +27,11 @@ layout: "privacy"
 <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
 
 <ul>
-<li>Email address</li><li>First name and last name</li><li>Phone number</li><li>Cookies and Usage Data</li>
+	<li>Email address</li>
+	<li>First name and last name</li>
+	<li>Phone number</li>
+	<li>Address, State, Province, ZIP/Postal code, City</li>
+	<li>Cookies and Usage Data</li>
 </ul>
 
 <h4>Usage Data</h4>
@@ -85,7 +89,49 @@ layout: "privacy"
 <p>We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.</p>
 <p>These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
 
+<h3>Analytics</h3>
+<p>We may use third-party Service Providers to monitor and analyse the use of our Service.</p>
 
+<p><strong>Google Analytics (Google LLC)</strong></p>
+<p>Google Analytics is a web analysis service provided by Google LLC (“Google”). Google utilizes the Data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services.
+Google may use the Data collected to contextualize and personalize the ads of its own advertising network.
+Personal Data collected: Cookies; Usage Data.</p>
+
+<p>
+Place of processing: United States – Privacy Policy – Opt Out. Privacy Shield participant.
+</p>
+
+
+<h3>Hosting and backend infrastructure</h3>
+<p>This type of service has the purpose of hosting Data and files that enable this Application to run and be distributed as well as to provide a ready-made infrastructure to run specific features or parts of this Application.
+
+Some services among those listed below, if any, may work through geographically distributed servers, making it difficult to determine the actual location where the Personal Data are stored.</p>
+
+<p><strong>Netlify (Netlify, Inc.)</strong></p>
+<p>Netlify is a hosting service provided by Netlify, Inc.
+Personal Data collected: various types of Data as specified in the privacy policy of the service.</p>
+<p>Place of processing: United States – Privacy Policy.</p>
+
+
+<h3>Displaying content from external platforms</h3>
+<p>This type of service allows you to view content hosted on external platforms directly from the pages of this Web Application and interact with them.
+This type of service might still collect web traffic data for the pages where the service is installed, even when Users do not use it.</p>
+
+<p><strong>Google Fonts (Google LLC)</strong></p>
+<p>Google Fonts is a typeface visualization service provided by Google LLC that allows this Web Application to incorporate content of this kind on its pages.
+Personal Data collected: Usage Data; various types of Data as specified in the privacy policy of the service.</p>
+<p>Place of processing: United States – Privacy Policy. Privacy Shield participant.</p>
+
+<p><strong>YouTube video widget (Google LLC)</strong></p>
+<p>YouTube is a video content visualization service provided by Google LLC that allows this Web Application to incorporate content of this kind on its pages.
+Personal Data collected: Cookies; Usage Data.</p>
+
+<p>Place of processing: United States – Privacy Policy. Privacy Shield participant.
+</p>
+<h3>Contacting the User</h3>
+<p><strong>Contact form (this Web Application)</strong></p>
+<p>By filling in the contact form with their Data, the User authorizes this Web Application to use these details to reply to requests for information, quotes or any other kind of request as indicated by the form’s header.
+Personal Data collected: email address; first name; last name.</p>
 
 <h2>Links To Other Sites</h2>
 <p>Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>

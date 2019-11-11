@@ -131,6 +131,8 @@
 	{{- partial "offcanvas.html" . -}}
 	{{- partial "footer.html" . -}}
 
+	<script src="{{.Site.BaseURL}}/js/filter.js"></script>
+
 	<script>
 	if (window.netlifyIdentity) {
 	window.netlifyIdentity.on("init", user => {

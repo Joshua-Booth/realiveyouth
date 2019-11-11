@@ -190,40 +190,42 @@
     <!-- /CONTENT -->
 {{ end }}
 {{ define "footer" }}
-<script>
-    var slideIndex = 0;
-    showSlide();
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/index.css" type="text/css"/>
 
-    function showSlide() {
-        var i;
-        var slides = document.getElementsByClassName("slides");
-        var dots = document.getElementsByClassName("dot");
-        var slideImages = document.getElementsByClassName("slide-image");
-        var slideCategories = document.getElementsByClassName("slide-category");
-        
-        for (i = 0; i < slides.length; i++) {
-            slideImages[i].style.width = "100%";
-            slides[i].style.display = "none";
+    <script>
+        var slideIndex = 0;
+        showSlide();
+
+        function showSlide() {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            var slideImages = document.getElementsByClassName("slide-image");
+            var slideCategories = document.getElementsByClassName("slide-category");
+            
+            for (i = 0; i < slides.length; i++) {
+                slideImages[i].style.width = "100%";
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";
+            slides[slideIndex-1].style.height = "100%";
+            dots[slideIndex-1].className += " active";
+
+            var postType = slides[slideIndex-1].children[0].innerText;
+            var postName = slides[slideIndex-1].children[1].innerText;
+
+            shareSavedPost(postType, postName);
+            setTimeout(showSlide, 8000); // Change slide every 8 seconds        
         }
-        slideIndex++;
-
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-
-        slides[slideIndex-1].style.display = "block";
-        slides[slideIndex-1].style.height = "100%";
-        dots[slideIndex-1].className += " active";
-
-        var postType = slides[slideIndex-1].children[0].innerText;
-        var postName = slides[slideIndex-1].children[1].innerText;
-
-        shareSavedPost(postType, postName);
-        setTimeout(showSlide, 8000); // Change slide every 8 seconds        
-    }
-</script>
+    </script>
 {{ end }}

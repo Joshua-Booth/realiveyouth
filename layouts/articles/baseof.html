@@ -12,7 +12,7 @@
       <meta http-equiv="refresh" content="2;url={{.Params.link}}" />
       {{ $title = "Redirecting..." }}
     {{ end }}
-
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
   </head>
   <body>
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>

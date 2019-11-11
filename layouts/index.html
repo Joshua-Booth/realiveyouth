@@ -54,7 +54,7 @@
                                 {{ else }}
                                     {{ $link = .Params.link }}
                                 {{ end }}
-                                {{ $rel = "nofollow" }}
+                                {{ $rel = "noopener nofollow" }}
                                 {{ $target = "_blank"}}
                             {{ end }}
 
@@ -128,8 +128,8 @@
             <hr>
             <button id="link-share" class="uk-button uk-button-secondary uk-width-1-2 uk-margin uk-margin-remove-top" onclick="copyLink('{{ .Permalink }}');">Copy Link</button>
             <hr class="uk-invisible">
-            <a id="facebook-share" class="uk-margin-small-right" href="https://facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" uk-icon="facebook"></a>
-            <a id="twitter-share" class="uk-margin-small-right" href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" uk-icon="twitter"></a>
+            <a id="facebook-share" class="uk-margin-small-right" href="https://facebook.com/sharer.php?u={{ .Permalink }}" rel="noopener nofollow" target="_blank" uk-icon="facebook"></a>
+            <a id="twitter-share" class="uk-margin-small-right" href="https://twitter.com/intent/tweet?url={{ .Permalink }}" rel="noopener nofollow" target="_blank" uk-icon="twitter"></a>
             <a id="email-share" class="uk-margin-small-right" href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink }}" target="_blank" uk-icon="mail"></a>
             <a id="sms-share" class="uk-margin-small-right uk-hidden@m " href="sms:?&amp;body={{ .Permalink }}" target="_blank" uk-icon="commenting"></a>
         </div>

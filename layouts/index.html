@@ -17,25 +17,18 @@
                         <div class="uk-height-large uk-cover-container uk-border-rounded slide" >
                             {{ $type := .Type }}
                             {{ $title_colour := "black" }}
-                            {{ $image := "bible.jpg" }}
                             {{ $blur := "false" }}
 
                             {{ if eq $type "testimonies"}}
                                 {{ $type = "Testimony" }}
                                 {{ $title_colour = "white" }}
-                                {{ $image = "sharing-the-word.jpg" }}
-                            {{ else if eq $type "questions"}}
-                                {{ $image = "question.jpg" }}
                             {{ else if eq $type "videos"}}
                                 {{ $title_colour = "white" }}
-                                {{ $image = "video.jpg" }}
                             {{ else if eq $type "songs"}}
                                 {{ $title_colour = "white" }}
-                                {{ $image = "drums.jpg" }}
                             {{ else if eq $type "articles"}}
                                 {{ $blur = "true" }}
                                 {{ $title_colour = "white" }}
-                                {{ $image = "book.jpg" }}
                             {{ end }}
 
                             {{ if eq $type .Type }}
@@ -60,9 +53,9 @@
 
                             <a href="{{ $link }}" rel="{{ $rel }}" target="{{ $target }}">
                                 {{ if eq $blur "true" }}
-                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide blur slide-image" src="uploads/{{$image}}" alt="{{ .Title }}">
+                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide blur slide-image" alt="{{ .Title }}">
                                 {{ else }}
-                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide slide-image" src="uploads/{{$image}}" alt="{{ .Title }}">
+                                    <img class="{{ lower (strings.TrimSuffix 's' .Type) }}-slide slide-image" alt="{{ .Title }}">
                                 {{ end }}
                             </a>
                             <div class="uk-position-bottom uk-light uk-text-center">

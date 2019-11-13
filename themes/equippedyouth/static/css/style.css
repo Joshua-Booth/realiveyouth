@@ -232,6 +232,14 @@
 
 }
 
+@media (min-height: 600px) {
+
+    #mobile-nav-footer {
+        bottom: 0 !important;
+    }
+
+}
+
 /* Main Page Content Styles */
 
 * {
@@ -311,6 +319,7 @@
 
 #mobile-nav-footer {
     padding: 30px !important;
+    bottom: unset;
 }
 
 #mobile-nav-instagram {

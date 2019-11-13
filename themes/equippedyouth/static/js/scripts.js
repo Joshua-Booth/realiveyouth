@@ -112,7 +112,7 @@ function loadSavedPosts() {
 
         // Type Label
         var typeLabel = document.createElement("div");
-        typeLabel.className += "uk-overlay uk-light uk-text-left uk-text-bottom type";
+        typeLabel.className += "uk-overlay uk-light uk-text-left uk-text-bottom type small-shadow";
         
         var typeLink = document.createElement("a");
         typeLink.className += "uk-link-reset";
@@ -129,7 +129,7 @@ function loadSavedPosts() {
 
         // Category Label
         var categoryLabel = document.createElement("div");
-        categoryLabel.className += "uk-overlay uk-light uk-text-left uk-text-bottom category";
+        categoryLabel.className += "uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow";
         var categoryLink = document.createElement("a");
         categoryLink.className += "uk-link-reset";
         categoryLink.textContent = category.charAt(0).toUpperCase() + category.slice(1);
@@ -140,7 +140,7 @@ function loadSavedPosts() {
         var saveLink = document.createElement("a");
         saveLink.setAttribute("onclick", `savePost('${title}', '${category}', '${type}')`);
         var save = document.createElement("div");
-        save.className += "uk-overlay uk-light uk-text-left uk-text-bottom save uk-border-circle";
+        save.className += "uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle";
         var saveIcon = document.createElement("img");
         saveIcon.className += "uk-image";
         saveIcon.setAttribute("src", "../img/Save.svg");
@@ -154,7 +154,7 @@ function loadSavedPosts() {
         shareLink.setAttribute("href", "#");
         
         var share = document.createElement("div");
-        share.className += "uk-overlay uk-light uk-text-left uk-text-bottom share uk-border-circle";
+        share.className += "uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle";
         
         var shareIcon = document.createElement("img");
         shareIcon.className += "uk-image";

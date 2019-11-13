@@ -30,7 +30,7 @@
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
       <div class="content-title" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
         <!-- Categories -->
-        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small single-post-categories">
+        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small single-post-categories small-shadow">
           <span class="black">{{ humanize .Params.categories }}</span>
         </div>
         <!-- Page Title -->
@@ -38,13 +38,13 @@
       </div>
       
       <!-- Save Button -->
-      <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
+      <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save small-shadow" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
         <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Save.svg" width="30px" height="30px" alt="Save" uk-img>
       </div>
 
       <!-- Share Button -->
       <a href="#" uk-toggle="target: #share-modal">
-        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle single-post-share">
+        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle single-post-share small-shadow">
           <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Share.svg" width="30px" height="30px" alt="Share" uk-img>
         </div>
       </a>

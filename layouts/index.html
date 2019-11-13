@@ -59,7 +59,7 @@
                                 {{ end }}
                             </a>
                             <div class="uk-position-bottom uk-light uk-text-center">
-                                <div class="uk-overlay uk-light uk-text-center category no-top-margin">
+                                <div class="uk-overlay uk-light uk-text-center category no-top-margin small-shadow">
                                     <div class="uk-animation-slide-bottom-small">
                                         <a href="{{ .Site.BaseURL}}{{ .Type }}"><span class="black">Featured {{ $type }}</span></a>
                                     </div>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         
-                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom category no-top-margin slide">
+                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin slide">
                             <div class="uk-animation-slide-bottom-small">
                                 {{ $category := .Params.categories }}
                                 {{ if eq $category "youth"}}
@@ -85,14 +85,14 @@
                             </div>
                         </div>
                 
-                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom save featured-save uk-border-circle slide" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
+                        <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow featured-save uk-border-circle slide" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                             <div class="uk-animation-slide-bottom-small">
                                 <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                             </div>
                         </div>
                         
                         <a href="#" uk-toggle="target: #share-modal">
-                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom share featured-share uk-border-circle slide">
+                            <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow featured-share uk-border-circle slide">
                                 <div class="uk-animation-slide-bottom-small">
                                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
                                 </div>
@@ -134,12 +134,12 @@
             <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
                     <div>
-                        <button onclick="location.href='{{.Site.BaseURL}}/categories/share'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/share'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Share
                         </button>
                     </div>
                     <div>
-                        <button onclick="location.href='{{.Site.BaseURL}}/categories/encourage'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button">
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/encourage'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
                             Encourage
                         </button>
                     </div>
@@ -147,12 +147,12 @@
                 <div class="navbutton-spacer"></div>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
                     <div>
-                        <button onclick="location.href='{{.Site.BaseURL}}/categories/explain'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/explain'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Explain
                         </button>
                     </div>
                     <div>
-                        <button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                        <button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Deepen
                         </button>
                     </div>
@@ -164,7 +164,7 @@
             <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
                     <div>
-                        <button disabled onclick="location.href='{{.Site.BaseURL}}/categories/youth'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button">
+                        <button disabled onclick="location.href='{{.Site.BaseURL}}/categories/youth'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
                             Youth Group
                         </button>
                     </div>
@@ -172,7 +172,7 @@
                 <div class="navbutton-spacer"></div>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
                     <div>
-                        <button onclick="location.href='{{.Site.BaseURL}}/music'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button">
+                        <button onclick="location.href='{{.Site.BaseURL}}/music'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Music
                         </button>
                     </div>

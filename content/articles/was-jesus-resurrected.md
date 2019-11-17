@@ -4,6 +4,7 @@ date: '2019-10-31'
 categories: explain
 type: articles
 image: /uploads/federico-beccari-477296.jpg
+link: ""
 ---
 ## Was Jesus Resurrected?
 

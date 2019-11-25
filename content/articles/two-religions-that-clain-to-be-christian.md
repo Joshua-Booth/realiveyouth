@@ -1,5 +1,5 @@
 ---
-title: Two Religions That Clain to be Christian
+title: Two Religions That Claim to be Christian
 date: '2019-11-25'
 categories: share
 type: articles

@@ -3,7 +3,7 @@ title: He Made Me Lean on Him - 4 Tips for Your Twenties
 date: '2019-11-24'
 categories: encourage
 type: articles
-image: /uploads/photo-1467844275056-5a15a5a4946a.jpg
+image: /uploads/splitshire-6242.jpg
 ---
 
 

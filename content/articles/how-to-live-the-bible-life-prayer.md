@@ -4,8 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/praying-guy.jpg
-link: >-
-  https://www.biblegateway.com/blog/2019/02/how-to-live-the-bible-life-and-prayer/
+link: ''
 ---
 In a teaching as clear and fresh as the blue Sea of Galilee, Jesus said this is how you should pray: 
 

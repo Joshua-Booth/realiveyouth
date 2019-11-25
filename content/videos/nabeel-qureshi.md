@@ -7,6 +7,6 @@ link:
   id: k0D8Uz4oQck
   imageURL: 'https://img.youtube.com/vi/k0D8Uz4oQck/maxresdefault.jpg'
   mediaType: video
-  url: 'https://www.youtube.com/watch?v=k0D8Uz4oQck'
+  url: www.youtube.com/watch?v=k0D8Uz4oQck
 ---
 

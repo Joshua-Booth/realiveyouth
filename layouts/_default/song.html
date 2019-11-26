@@ -53,9 +53,11 @@
                     <iframe title="{{.Title}}" src={{ replace .Params.link "track" "embed/track" }} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>   
                 </div>
 
+                {{ if (isset .Params "lyrics") }}
                 <div class="uk-text-center uk-padding-remove-left">
                     <iframe title="{{.Title}}" class="song-lyrics" src="{{.Params.lyrics}}/embed?theme=light" border=0></iframe>
                 </div>
+                {{ end }}
             </div>
         </div>
     </div>

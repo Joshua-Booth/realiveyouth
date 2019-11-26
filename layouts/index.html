@@ -74,7 +74,7 @@
                         <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin slide">
                             <div class="uk-animation-slide-bottom-small">
                                 {{ $category := .Params.categories }}
-                                {{ if eq $category "youth"}}
+                                {{ if eq $category "youth-group"}}
                                     {{ $category = "Youth Group" }}
                                 {{ else }}
                                     {{ $category = print (humanize $category) " your Faith" }}

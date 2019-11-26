@@ -30,8 +30,8 @@
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 			<!-- Page Title -->
 			{{ $title := .Title }}
-			{{ if eq $title "youth"}}
-				{{ $title = print $title " Group" }}
+			{{ if eq $title "youth-group"}}
+				{{ $title = "Youth Group" }}
 			{{ else if eq $title "Categories"}}
 				{{ $title = print "Resource Categories" }}
 			{{ else }}

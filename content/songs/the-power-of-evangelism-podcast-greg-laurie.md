@@ -1,5 +1,5 @@
 ---
-title: The Power of Evangelism - Podcast Greg Laurie
+title: The Power of Evangelism - Podcast with Lee Strobel
 layout: song
 date: '2019-11-27'
 categories: share

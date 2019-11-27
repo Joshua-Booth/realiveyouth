@@ -133,6 +133,42 @@
 </li>
 {{ end }}
 
+{{ if or (eq .File.Dir "podcasts/") (eq .File.Dir "podcasts\\") }}
+<li data-type="podcast">
+    <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-medium uk-padding-remove">
+        <div class="uk-container content-spacing">
+            <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
+                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                    <iframe title="{{.Title}}" src={{ replace .Params.link "episode" "embed-podcast/episode" }} width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+
+            <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin">
+                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                    <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
+                        <span class="black">{{ humanize .Params.categories }}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
+                <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                    <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
+                </div>
+            </div>
+
+            <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
+                <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
+                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                        <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Share.svg" width="60px" height="60px" alt="Share" uk-img>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+</li>
+{{ end }}
+
 {{ if or (eq .File.Dir "videos/") (eq .File.Dir "videos\\") }}
 <li data-type="video">
     <section class="video uk-section uk-section-small uk-display-inline-block uk-margin-remove video-width uk-padding-remove content-section">

@@ -93,6 +93,19 @@ collections:
     - {label: "URL", name: "link", widget: "string", required: true}
     - {label: "Lyrics URL", name: "lyrics", widget: "string", required: false}
 
+ - name: "podcasts"
+   label: "Podcasts"
+   folder: "content/podcasts"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Layout", name: "layout", widget: "hidden", default: "podcast"}
+    - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
+    - {label: Type, name: type, widget: hidden, default: "podcasts"}
+    - {label: "URL", name: "link", widget: "string", required: true}
+
  - name: "videos"
    label: "Videos"
    folder: "content/videos"

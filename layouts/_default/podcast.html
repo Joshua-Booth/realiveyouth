@@ -18,11 +18,10 @@
         <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
             <!-- Mobile Navigation -->
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
-              <img class="uk-navbar-toggle navbutton white-nav-button uk-hidden@s" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}/img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img>
+              <img class="uk-navbar-toggle navbutton uk-hidden@s" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}/img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img>
             </div>
         </div>
-        <img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/drums.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
-        <img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/drums.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+        <img data-src="{{.Site.BaseURL}}/uploads/microphone.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
     </div>
 
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
@@ -32,7 +31,7 @@
                 <span class="black">{{ humanize .Params.categories }}</span>
             </div>
             <!-- Page Title -->
-            <h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent white">{{.Title}}</h1>
+            <h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent black">{{.Title}}</h1>
         </div>
         
         <!-- Save Button -->
@@ -50,15 +49,11 @@
         <div class="uk-container">
             <div class="uk-grid uk-align-center position-center" data-ukgrid>
                 <div class="uk-section uk-section-small uk-text-center audio-track-container">  
-                    <iframe title="{{.Title}}" src={{ replace .Params.link "track" "embed/track" }} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>   
+                    <iframe title="{{.Title}}" src={{ replace .Params.link "episode" "embed-podcast/episode" }} width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
 
-                <div class="uk-text-center uk-padding-remove-left">                   
-                {{ if (in .Params.lyrics "https://www.musixmatch.com/lyrics") }}
-                    <iframe title="{{.Title}}" class="song-lyrics" src="{{.Params.lyrics}}/embed?theme=light" border=0></iframe>
-                {{ else if (isset .Params "lyrics") }}
-                    {{ .Params.lyrics }}
-                {{ end }}
+                <div class="uk-text-center uk-padding-remove-left">
+                    {{ .Content }}
                 </div>
             </div>
         </div>

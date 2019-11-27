@@ -17,6 +17,7 @@
                         <div class="uk-height-large uk-cover-container uk-border-rounded slide" >
                             {{ $type := .Type }}
                             {{ $title_colour := "black" }}
+                            {{ $title_width := "" }}
                             {{ $blur := "false" }}
 
                             {{ if eq $type "testimonies"}}
@@ -26,6 +27,8 @@
                                 {{ $title_colour = "white" }}
                             {{ else if eq $type "songs"}}
                                 {{ $title_colour = "white" }}
+                            {{ else if eq $type "podcasts"}}
+                                {{ $title_width = "podcast-width" }}
                             {{ else if eq $type "articles"}}
                                 {{ $blur = "true" }}
                                 {{ $title_colour = "white" }}
@@ -39,16 +42,16 @@
                             {{ $rel := "" }}
                             {{ $target := "_self" }}
 
-                            {{ if not (isset .Params "link" ) | or (eq .Params.link "" ) }}
+                            {{ if not (isset .Params "link" ) | or (eq .Params.link "" ) (eq $type "Podcast") (eq $type "Song") }}
                                 {{ $link = .Permalink }}
                             {{ else }}
-                                {{ if eq $type "Video"}}
+                                {{ if eq $type "Video" }}
                                     {{ $link = .Params.link.url }}
                                 {{ else }}
                                     {{ $link = .Params.link }}
                                 {{ end }}
                                 {{ $rel = "noopener nofollow" }}
-                                {{ $target = "_blank"}}
+                                {{ $target = "_blank" }}
                             {{ end }}
 
                             <a href="{{ $link }}" rel="{{ $rel }}" target="{{ $target }}">
@@ -66,7 +69,9 @@
                                 </div>
                                 
                                 <a href="{{ $link }}" rel="{{ $rel }}" target="{{ $target }}">
-                                    <h1 class="slide-title {{$title_colour}} uk-text-left uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">{{ .Title }}</h1>
+                                    <h1 class="slide-title {{$title_colour}} {{$title_width}} uk-text-left uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">
+                                        {{ .Title }}
+                                    </h1>
                                 </a>
                             </div>
                         </div>

@@ -5,6 +5,6 @@ theme = "equippedyouth"
 googleAnalytics = "UA-151959494-1"
 
 [params]
-  mainSections = ["bible_verses", "questions", "songs", "testimonies", "articles", "videos"]
+  mainSections = ["bible_verses", "questions", "songs", "podcasts", "testimonies", "articles", "videos"]
 [outputs]
   home = ["HTML", "RSS", "JSON"]

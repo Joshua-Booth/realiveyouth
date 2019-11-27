@@ -106,6 +106,18 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "podcasts"}
     - {label: "URL", name: "link", widget: "string", required: true}
 
+ - name: "youtube_videos"
+   label: "YouTube Videos"
+   folder: "content/videos"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+    - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
+    - {label: Type, name: type, widget: hidden, default: "videos"}
+    - {label: "YOUTUBE", name: "link", widget: youtube, extraInfo: true, required: true}
+
  - name: "videos"
    label: "Videos"
    folder: "content/videos"
@@ -116,4 +128,5 @@ collections:
     - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
     - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
     - {label: Type, name: type, widget: hidden, default: "videos"}
-    - {label: "YOUTUBE", name: "link", widget: youtube, extraInfo: true, required: true}
+    - {label: "Video File", name: "VideoURL", widget: file, required: true}
+    - {label: "Text Content", name: "body", widget: "markdown", required: false}

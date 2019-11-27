@@ -177,9 +177,16 @@
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-padding-remove uk-flex uk-light white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small" class="uk-width-1-1">
                         <a title="{{.Title}}" aria-label="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
-                            <iframe title="{{.Title}}" class="uk-height-medium uk-width-1-1 border-rounded" src="https://www.youtube.com/embed/{{.Params.link.id}}"
-                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
+
+                            {{ if (in .Params.link.url "https://www.youtube.com/watch?v=") }}
+                                <iframe title="{{.Title}}" class="uk-height-medium uk-width-1-1 border-rounded" src="https://www.youtube.com/embed/{{.Params.link.id}}"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                </iframe>
+                            {{ else if or (ne .Params.VideoURL "") (isset .Params "VideoURL")}}
+                                <video class="uk-height-medium uk-width-1-1 border-rounded rounded-video" preload="metadata" controls>
+                                    <source src="{{.Site.BaseURL}}{{.Params.VideoURL}}" type="video/mp4">  
+                                </video>
+                            {{ end }}
                         </a>
                     </div>
                 </div>                                    

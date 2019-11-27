@@ -7,10 +7,14 @@
 {{ define "main" }}
     <article class="uk-article uk-align-center uk-padding uk-padding-remove-top single-content-width">
         <p class="uk-article-meta">
-            {{ if eq .Params.link.url "" }}
-                {{ .Content }}
-            {{ else }}
+            {{ if (in .Params.link.url "https://www.youtube.com/watch?v=") }}
                 <h2>Please wait while we redirect you to your video.</h2>
+            {{ else if or (ne .Params.VideoURL "") (isset .Params "VideoURL")}}
+                <video class="uk-height-medium uk-width-1-1 border-rounded rounded-video" preload="metadata" controls>
+                    <source src="{{.Site.BaseURL}}{{.Params.VideoURL}}" type="video/mp4">  
+                </video>
+
+                {{ .Content }}
             {{ end }}
         </p>
     </article>

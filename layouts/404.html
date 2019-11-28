@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
 </head>
 <body>
+    <!-- Default Desktop Header -->
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
     
     {{- partial "navigation.html" . -}}
 
-    <!-- Header Image -->
+    <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large black-bg">
+        <!-- Logo -->
         <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
                 <a href="{{.Site.BaseURL}}" title="Logo">
@@ -24,6 +26,7 @@
         </div>
     </div>
 
+    <!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="content-title error-page-title auto-side-margins" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
             <!-- Page Title -->
@@ -31,13 +34,14 @@
         </div>
 
         <div class="content-title error-page-subtitle auto-side-margins" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-            <!-- Page Title -->
+            <!-- Page Title Message -->
             <h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white">Page Not Found</h1>
         </div>
     </div>
 
     {{- partial "share.html" . -}}
   
+    <!-- Page Content -->
     <div id="content" class="uk-flex uk-flex-center uk-flex-column content-404">
         <p class="auto-side-margins"> The page you were looking for does not exist. </p>
         <button class="uk-button uk-button-secondary auto-side-margins return-back-button" onclick="window.history.back()"> Return back </button>
@@ -47,6 +51,7 @@
     {{- partial "offcanvas.html" . -}}
     {{- partial "footer.html" . -}}
 
+    <!-- Netlify Identity -->
     <script>
       if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {

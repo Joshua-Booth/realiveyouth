@@ -5,15 +5,17 @@
     <title>Realive Equipped Youth Manual</title>
 {{ end }}
 {{ define "main" }}
-    <!-- HERO -->
+    <!-- Featured Post Carusel -->
     <section class="uk-section uk-section-small">
         <div class="uk-container button-container">
             <div class="slideshow-container">
+                <!-- Loop over latest five posts -->
                 {{ range $index, $element := first 5 (where .Site.RegularPages "Type" "in" site.Params.mainSections)}}
                     <div class="slides uk-animation-slide-right-medium" id="slide-{{$index}}">
                         <span hidden>{{.Type}}</span>
                         <span hidden>{{.File.BaseFileName}}</span>
 
+                        <!-- Slide Styling -->
                         <div class="uk-height-large uk-cover-container uk-border-rounded slide" >
                             {{ $type := .Type }}
                             {{ $title_colour := "black" }}
@@ -38,6 +40,7 @@
                                 {{ $type = title (humanize (strings.TrimSuffix "s" .Type)) }}
                             {{ end }}
 
+                            <!-- Slide Link -->
                             {{ $link := .Permalink }}
                             {{ $rel := "" }}
                             {{ $target := "_self" }}
@@ -75,7 +78,8 @@
                                 </a>
                             </div>
                         </div>
-                        
+
+                        <!-- Category -->
                         <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin slide">
                             <div class="uk-animation-slide-bottom-small">
                                 {{ $category := .Params.categories }}
@@ -89,13 +93,15 @@
                                 </a>
                             </div>
                         </div>
-                
+
+                        <!-- Save Post Button -->
                         <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow featured-save uk-border-circle slide" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                             <div class="uk-animation-slide-bottom-small">
                                 <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                             </div>
                         </div>
-                        
+
+                        <!-- Share Post Button -->
                         <a href="#" uk-toggle="target: #share-modal">
                             <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow featured-share uk-border-circle slide">
                                 <div class="uk-animation-slide-bottom-small">
@@ -106,6 +112,7 @@
                     </div>
                 {{ end }}
 
+                <!-- Slide Position Indicator -->
                 <div class="dot-container">
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -116,9 +123,8 @@
             </div>
         </div>
     </section>
-    <!-- /HERO -->
 
-    <!-- Saved Post Share Modal -->
+    <!-- Share Modal -->
     <div id="share-modal" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-text-center">
             <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -133,16 +139,18 @@
         </div>
     </div>
 
-    <!-- CONTENT -->
+    <!-- Page Content -->
     <div class="uk-section uk-section-default">
         <div class="uk-container button-container">
             <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+                    <!-- Share your Faith Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/categories/share'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Share
                         </button>
                     </div>
+                    <!-- Encourage your Faith Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/categories/encourage'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
                             Encourage
@@ -151,11 +159,13 @@
                 </div>
                 <div class="navbutton-spacer"></div>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+                    <!-- Explain your Faith Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/categories/explain'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Explain
                         </button>
                     </div>
+                    <!-- Deepen your Faith Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Deepen
@@ -168,6 +178,7 @@
 
             <div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+                    <!-- Youth Group Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/categories/youth-group'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
                             Youth Group
@@ -176,6 +187,7 @@
                 </div>
                 <div class="navbutton-spacer"></div>
                 <div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+                    <!-- Music Button -->
                     <div>
                         <button onclick="location.href='{{.Site.BaseURL}}/music'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
                             Music
@@ -185,14 +197,14 @@
             </div>
         </div>
     </div>
-    <!-- /CONTENT -->
 {{ end }}
 {{ define "footer" }}
+    <!-- Index specific styling -->
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/index.css" type="text/css"/>
 
     <script>
         var slideIndex = 0;
-        showSlide();
+        showSlide(); // Start the slideshow on script load
 
         function showSlide() {
             var i;

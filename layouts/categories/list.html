@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -8,14 +8,16 @@
 	{{- partial "head.html" . -}}
 	<link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
 	<link rel="stylesheet" href="{{.Site.BaseURL}}css/filter.css" type="text/css"/>
-  </head>
-  <body>
+</head>
+<body>
+	<!-- Default Desktop Header -->
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
     
     {{- partial "navigation.html" . -}}
 
-    <!-- Header Image -->
+    <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
+		<!-- Logo -->
 		<div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
 			<div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
 				<a href="{{.Site.BaseURL}}" title="Logo">
@@ -23,10 +25,12 @@
 				</a>
 			</div>
 		</div>
+		<!-- Backgound Image -->
 		<img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
 		<img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
 	</div>
 
+	<!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 			<!-- Page Title -->
@@ -42,19 +46,20 @@
         </div>
     </div>
 	
-	<!--CONTENT-->
+    <!-- Page Content -->
     <div class="uk-section uk-section-default">
 		<div class="uk-container">
 			<div class="uk-grid uk-text-center" data-ukgrid>
+				<!-- Content -->
 				<div id="content" class="uk-width-2-4@m">
-
 					{{ if ne $title "Resource Categories" }}
 						<div id="filter" uk-filter="target: .js-filter">
 							<div id="filter-container" class="uk-grid-small uk-grid-divider uk-child-width-auto filter-controls" hidden uk-grid>
 								<div id="filter-dialog" class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 									<h2 class="uk-modal-title uk-text-center">Filter Resources</h2>
 									<button class="uk-modal-close-default filter-button" type="button" data-uk-icon="close" uk-toggle="target: #filter-container"></button>
-									
+
+									<!-- Filter Options -->
 									<div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
 										<div>
 											<ul class="uk-subnav uk-subnav-pill" uk-margin>
@@ -76,16 +81,19 @@
 								</div>
 							</div>
 
+							<!-- Filter Buttons -->
 							<div id="set-filter" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-left">
 								Filter: <span class="uk-badge pointer-cursor" uk-toggle="target: #filter-container">All</span>
 
 								{{- partial "mobile_filter.html" . -}}
 							</div>
 
+							<!-- No Content Error Message -->
 							<div id="no-filter-content" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-top-small">
 								No content found of this type.
 							</div>
 
+							<!-- Filtered Posts -->
 							<ul id="category-content" class="js-filter uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-bottom-small" uk-grid="masonry: true">
 							{{- .Content -}}
 								{{ range where .Pages "Type" "in" site.Params.mainSections}}
@@ -97,13 +105,16 @@
 						{{- partial "filter.html" . -}}
 
 					{{ else }}
+						<!-- Category buttons will be displayed if the category is not resource categories -->
 						<div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
 							<div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+								<!-- Share Button -->
 								<div>
 									<button onclick="location.href='{{.Site.BaseURL}}/categories/share'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
 										Share
 									</button>
 								</div>
+								<!-- Encourage Button -->
 								<div>
 									<button onclick="location.href='{{.Site.BaseURL}}/categories/encourage'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
 										Encourage
@@ -112,11 +123,13 @@
 							</div>
 							<div class="navbutton-spacer"></div>
 							<div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+								<!-- Explain Button -->
 								<div>
 									<button onclick="location.href='{{.Site.BaseURL}}/categories/explain'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
 										Explain
 									</button>
 								</div>
+								<!-- Deepen Button -->
 								<div>
 									<button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
 										Deepen
@@ -129,7 +142,6 @@
 			</div>
 		</div>
 	</div>
-	<!--/CONTENT-->
 
 	{{ block "footer" . }}{{ end }}
 	
@@ -137,8 +149,10 @@
 	{{- partial "offcanvas.html" . -}}
 	{{- partial "footer.html" . -}}
 
+	<!-- Filter Script -->
 	<script src="{{.Site.BaseURL}}/js/filter.js"></script>
 
+	<!-- Netlify Identity -->
 	<script>
 	if (window.netlifyIdentity) {
 	window.netlifyIdentity.on("init", user => {

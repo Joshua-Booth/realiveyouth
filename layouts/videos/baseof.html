@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     {{ block "metadata" . }}{{ end }}
     {{- partial "head.html" . -}}
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <title>
+		{{ block "title" . }}
+      		{{ .Site.Title }}
+		{{ end }}
+	</title>
 
+	<!-- Redirect external YouTube videos to external website link -->
     {{ $title := .Title }}
     {{ if (in .Params.link.url "https://www.youtube.com/watch?v=") }}
       <meta http-equiv="refresh" content="2;url={{.Params.link.url}}" />
       {{ $title = "Redirecting..." }}
     {{ end }}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
-  </head>
-  <body>
+</head>
+<body>
+	<!-- Default Desktop Header -->
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
     
     {{- partial "navigation.html" . -}}
 
-    <!-- Header Image -->
+    <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
+		<!-- Logo -->
         <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
                 <a href="{{.Site.BaseURL}}" title="Logo">
                     <img class="uk-logo uk-hidden@l" alt="Logo" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
                 </a>
             </div>
-        </div>
+		</div>
+		<!-- Backgound Image -->
         <img class="blur video-header" data-src="{{.Site.BaseURL}}uploads/video.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
     </div>
 
+	<!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
-      <div class="content-title" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
-        <!-- Categories -->
-        {{ if (in .Params.VideoURL "uploads") }}
-        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small single-post-categories small-shadow">
-          <span class="black">{{ humanize .Params.categories }}</span>
-        </div>
-        {{ end }}
-        <!-- Page Title -->
-        <h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent white">{{ $title }}</h1>
-      </div>
+      	<div class="content-title" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+			<!-- Categories -->
+			{{ if (in .Params.VideoURL "uploads") }}
+				<div data-uk-scrollspy="cls: uk-animation-slide-bottom-small single-post-categories small-shadow">
+					<span class="black">{{ humanize .Params.categories }}</span>
+				</div>
+			{{ end }}
+			<!-- Page Title -->
+			<h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent white">{{ $title }}</h1>
+		</div>
 
-      {{ if (in .Params.VideoURL "uploads") }}
-        <!-- Save Button -->
-        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save small-shadow" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
-          <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Save.svg" width="30px" height="30px" alt="Save" uk-img>
-        </div>
+		{{ if (in .Params.VideoURL "uploads") }}
+			<!-- Save Button -->
+			<div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle uk-overlay single-post-save small-shadow" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
+				<img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Save.svg" width="30px" height="30px" alt="Save" uk-img>
+			</div>
 
-        <!-- Share Button -->
-        <a href="#" uk-toggle="target: #share-modal">
-          <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle single-post-share small-shadow">
-            <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Share.svg" width="30px" height="30px" alt="Share" uk-img>
-          </div>
-        </a>
-      {{ end }}
+			<!-- Share Button -->
+			<a href="#" uk-toggle="target: #share-modal">
+				<div data-uk-scrollspy="cls: uk-animation-slide-bottom-small uk-border-circle single-post-share small-shadow">
+					<img class="uk-image" href="#" data-src="{{.Site.BaseURL}}/img/Share.svg" width="30px" height="30px" alt="Share" uk-img>
+				</div>
+			</a>
+		{{ end }}
     </div>
 
-  {{- partial "share.html" . -}}
+	{{- partial "share.html" . -}}
+	
+	<!-- Page Content -->
+	<div id="content" class="uk-flex uk-flex-center">
+	{{ block "main" . }}
+	{{ end }}
+	</div>
   
-  <div id="content" class="uk-flex uk-flex-center">
-  {{ block "main" . }}
-  {{ end }}
-  </div>
-  
-  {{ block "footer" . }}{{ end }}
-  {{- partial "mobilenav.html" . -}}
-  {{- partial "offcanvas.html" . -}}
-  {{- partial "footer.html" . -}}
+	{{ block "footer" . }}{{ end }}
+	{{- partial "mobilenav.html" . -}}
+	{{- partial "offcanvas.html" . -}}
+	{{- partial "footer.html" . -}}
 
+	<!-- Netlify Identity -->
     <script>
       if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {

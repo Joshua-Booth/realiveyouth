@@ -4,6 +4,7 @@ var filterContainer = document.getElementById("filter-container");
 
 
 function setFilter(filterName) {
+    // Sets the current filter for the content
     var setFilter = document.getElementById("set-filter").children[0];
     if (filterName == 'all') {
         errorDiv.textContent = "No content found for this category!";

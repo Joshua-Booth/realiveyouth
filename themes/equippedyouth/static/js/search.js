@@ -1,3 +1,5 @@
+// Client side searching for Hugo.io with Fuse.js
+// Code from https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae
 summaryInclude=60;
 var fuseOptions = {
   shouldSort: true,

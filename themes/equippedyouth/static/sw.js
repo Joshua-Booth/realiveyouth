@@ -1,3 +1,7 @@
+// Realive Equipped Youth Manual Service worker
+
+// Caches files for offline viewing.
+
 const cacheName = 'files';
 
 addEventListener('fetch',  fetchEvent => {

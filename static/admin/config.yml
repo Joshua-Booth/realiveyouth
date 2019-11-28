@@ -2,11 +2,14 @@ backend:
   name: git-gateway
   branch: master
 
+# Where our uploaded files are stored
 media_folder: "static/uploads"
 public_folder: "uploads"
+# Enables the backend workflow on NetlifyCMS
 publish_mode: editorial_workflow
 
 collections:
+# Main Site Pages
  - name: "pages"
    label: "Pages"
    files:
@@ -27,6 +30,8 @@ collections:
       fields:
         - {label: "Title", name: "title", widget: "string", required: true}
         - {label: "Content", name: "body", widget: "markdown", required: true}
+
+# Question Content Type
  - name: "questions"
    label: "Questions"
    folder: "content/questions"
@@ -39,6 +44,7 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "questions"}
     - {label: "Content", name: "body", widget: "markdown", required: true}
 
+# Bible Verse Content Type
  - name: "bible_verses"
    label: "Bible Verses"
    folder: "content/bible_verses"
@@ -51,7 +57,8 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "bible_verses"}
     - {labe: "Version", name: "version", widget: "text", required: true}
     - {label: "Content", name: "body", widget: "markdown", required: true}
-  
+
+# Testimony Content Type
  - name: "testimonies"
    label: "Testimonies"
    folder: "content/testimonies"
@@ -64,7 +71,8 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "testimonies"}
     - {label: "Header Image", name: "image", widget: image, default: "uploads/church.jpg", required: false, allow_multiple: false}
     - {label: "Content", name: "body", widget: "markdown", required: true}
- 
+
+# Article Content Type
  - name: "articles"
    label: "Articles"
    folder: "content/articles"
@@ -79,6 +87,7 @@ collections:
     - {label: "Text Content", name: "body", widget: "markdown", required: true}
     - {label: "URL", name: "link", widget: "string", default: "", required: false}
 
+# Song Content Type
  - name: "songs"
    label: "Songs"
    folder: "content/songs"
@@ -93,6 +102,7 @@ collections:
     - {label: "URL", name: "link", widget: "string", required: true}
     - {label: "Lyrics URL", name: "lyrics", widget: "string", required: false}
 
+# Podcast Content Type
  - name: "podcasts"
    label: "Podcasts"
    folder: "content/podcasts"
@@ -106,6 +116,7 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "podcasts"}
     - {label: "URL", name: "link", widget: "string", required: true}
 
+# YouTube Video Content Type
  - name: "youtube_videos"
    label: "YouTube Videos"
    folder: "content/videos"
@@ -118,6 +129,7 @@ collections:
     - {label: Type, name: type, widget: hidden, default: "videos"}
     - {label: "YOUTUBE", name: "link", widget: youtube, extraInfo: true, required: true}
 
+# Video Upload Content Type
  - name: "videos"
    label: "Videos"
    folder: "content/videos"

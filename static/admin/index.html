@@ -1,19 +1,20 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Content Manager</title>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.9.7/dist/netlify-cms.js"></script>
- <!-- Include the youtube widget -->
-  <script src="https://unpkg.com/netlify-cms-widget-youtube@^0.3.0"></script>
+  	<!-- Include the script that builds the page and powers Netlify CMS -->
+  	<script src="https://unpkg.com/netlify-cms@^2.9.7/dist/netlify-cms.js"></script>
+  	<!-- Include the youtube widget -->
+  	<script src="https://unpkg.com/netlify-cms-widget-youtube@^0.3.0"></script>
 
-  <script>
-    CMS.registerWidget('youtube', youtubeControl, youtubePreview)
-  </script>
+  	<script>
+    	// Register YouTube widget
+    	CMS.registerWidget('youtube', youtubeControl, youtubePreview)
+  	</script>
 </body>
 </html>

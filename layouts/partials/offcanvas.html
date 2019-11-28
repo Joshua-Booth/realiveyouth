@@ -1,8 +1,11 @@
-<div id="offcanvas-nav" data-uk-offcanvas="overlay: true; esc-close: true; bg-close: true;">
+<div id="offcanvas-nav" data-uk-offcanvas="overlay: true; esc-close: true; bg-close: true; flip: true;">
 	<div class="uk-offcanvas-bar uk-flex uk-flex-column uk-offcanvas-bar-animation uk-offcanvas-slide uk-background-default">
 		<ul class="uk-nav uk-nav-primary uk-nav-left">
 			<li class="uk-nav-header">
 				<img id="mobile-nav-close" class="uk-offcanvas-close flip navbutton uk-hidden@m" data-src="{{.Site.BaseURL}}/img/Navigation.svg" alt="Navigate" uk-img>
+				<a href="{{.Site.BaseURL}}" class="uk-padding-remove" title="Logo">
+					<img class="uk-logo uk-align-right" alt="Logo" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
+				</a>
 			</li>
 			<li class="uk-active"><a class="uk-link-muted" href="{{.Site.BaseURL}}">Home</a></li>
 			<li class="uk-parent">

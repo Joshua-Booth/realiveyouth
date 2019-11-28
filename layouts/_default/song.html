@@ -15,10 +15,11 @@
 
     <!-- Header Image -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
-        <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-center">
-            <!-- Mobile Navigation -->
+        <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
-              <img class="uk-navbar-toggle navbutton white-nav-button uk-hidden@s" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}/img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img>
+                <a href="{{.Site.BaseURL}}" title="Logo">
+                    <img class="uk-logo uk-hidden@l" alt="Logo" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
+                </a>
             </div>
         </div>
         <img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/drums.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>

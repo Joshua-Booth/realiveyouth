@@ -1,27 +1,27 @@
 <header id="header" class="white-background" data-uk-sticky="show-on-up: true; animation: uk-animation-fade; media: @l">
+	<div class="uk-hidden@s" style="margin-top: 20px"></div>
 	<div class="uk-container">
 		<nav id="navbar" class="white-background" data-uk-navbar="mode: click;">
-			<div class="uk-navbar-left nav-overlay top-nav">
-				<img class="uk-navbar-toggle navbutton uk-hidden@m" data-uk-toggle href="#offcanvas-nav"  data-src="{{.Site.BaseURL}}img/Navigation.svg" width="60px" height="60px" alt="Navigate" uk-img style="filter:brightness(0)">
+			<div class="uk-navbar-left top-nav">
+				<a href="{{.Site.BaseURL}}" title="Logo">
+					<img class="uk-logo uk-hidden@l" alt="Logo" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
+				</a>
 			</div>
-			<div id="page-title" class="uk-navbar-center nav-overlay top-nav">
+			<div id="page-title" class="uk-navbar-center top-nav">
 				<a class="uk-navbar-item uk-link-reset" href="{{.Site.BaseURL}}" title="Logo">
-					<img class="uk-logo uk-visible@s" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
+					<img class="uk-logo uk-visible@l" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
 					<h1 class="uk-text-large uk-margin-remove">Realive Equipped Youth Manual</h1>
 				</a>
 			</div>
-			<div class="uk-navbar-right nav-overlay top-nav">
+			<div class="uk-navbar-right top-nav">
 				<div class="uk-navbar-item uk-visible@s">
 					<a href="{{ .Site.BaseURL}}saved" style="margin-right: 10px">
 						<img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="15px" height="15px" alt="Save" uk-img>
 					</a>
 					<a class="uk-navbar-toggle uk-padding-remove" style="margin-right: 4px" aria-label="Search" data-uk-search-icon data-uk-toggle="target: .top-nav; animation: uk-animation-fade" href="#"></a>
 				</div>
-				<a href="{{.Site.BaseURL}}" title="Logo">
-					<img class="uk-logo uk-hidden@s" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
-				</a>
 			</div>
-			<div class="nav-overlay uk-navbar-left uk-flex-1 top-nav" hidden>
+			<div class="uk-navbar-left uk-flex-1 top-nav" hidden>
 				<div class="uk-navbar-item uk-width-expand">
 					<form class="uk-search uk-search-navbar uk-width-1-1" action="{{.Site.BaseURL}}search/" onsubmit="this.search.value">
 						<input class="uk-search-input" type="search" name="s" placeholder="Search...">

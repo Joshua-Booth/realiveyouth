@@ -1,17 +1,24 @@
+<!-- Page Footer -->
 <footer class="uk-section uk-section-small uk-section-muted uk-position-relative uk-position-bottom">
 	<div id="footer" class="uk-container">
+		<!-- Copyright and Privacy -->
 		<p class="uk-text-small footer-copyright">
 			<strong>Realive Youth Copyright &copy; 2019 | <a href="{{.Site.BaseURL}}privacy">Privacy</a></strong>
 		</p>
+		<!-- Social Media -->
 		<div class="uk-inline uk-align-right uk-margin-remove">
 			<a href="https://www.facebook.com/groups/realive.youth" data-uk-icon="facebook" aria-label="Facebook" rel="noopener nofollow" target="_blank"></a>
 			<a href="https://www.instagram.com/realiveyouth/" data-uk-icon="instagram" aria-label="Instagram" rel="noopener nofollow" target="_blank"></a>
 		</div>
 	</div>
 </footer>
+
+<!-- Hides the gap between mobile navigation and footer -->
 <div class="uk-hidden@s mobile-padder"></div>
 
 <script src="{{.Site.BaseURL}}js/scripts.js"></script>
+
+<!-- Registers/Updates the service worker for the PWA functionality -->
 <script>
 	if (navigator.serviceWorker || !navigator.serviceWorker.controller) {
 		if (navigator.serviceWorker.controller != null) {

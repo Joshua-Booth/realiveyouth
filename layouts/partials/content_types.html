@@ -1,7 +1,9 @@
+<!-- Bible Verses -->
 {{ if or (eq .File.Dir "bible_verses/") (eq .File.Dir "bible_verses\\") }}
 <li data-type="verse">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
+            <!-- Title - Reference and Version -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom reference">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <h3 class="post-header black">
@@ -12,8 +14,10 @@
                 </div>
             </div>
 
+            <!-- Content -->
             <div class="uk-height-small uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-position-cover uk-flex uk-flex-top uk-light uk-text-center uk-text-secondary verse-inside-padding uk-overflow-hidden">
+                    <!-- Verse Preview -->
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if le (len .Content) 120 }}
                             <p style="margin-top: 35px;">{{ .Content }}</p>
@@ -29,7 +33,9 @@
                 </div>
             </div>
 
+            <!-- Verse Button Container -->
             <div class="verse-container">
+                <!-- Category -->
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -38,12 +44,14 @@
                     </div>
                 </div>
 
+                <!-- Save Button -->
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                     </div>
                 </div>
-                
+
+                <!-- Share Button -->
                 <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                     <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                         <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -57,10 +65,12 @@
 </li>
 {{ end }}
 
+<!-- Questions -->
 {{ if or (eq .File.Dir "questions/") (eq .File.Dir "questions\\") }}
 <li data-type="question">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
+            <!-- Title - Question -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom question-post-height border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <h3 class="post-header black">
@@ -71,6 +81,7 @@
                 </div>
             </div>
 
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -79,12 +90,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+             <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -97,16 +110,20 @@
 </li>
 {{ end }}
 
+<!-- Songs -->
 {{ if or (eq .File.Dir "songs/") (eq .File.Dir "songs\\") }}
 <li data-type="song">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-small uk-padding-remove">
         <div class="uk-container content-spacing">
+            <!-- Content -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
+                <!-- Spotify Song Embed -->
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <iframe title="{{.Title}}" src={{ replace .Params.link "track" "embed/track" }} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
             </div>
 
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -115,12 +132,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+            <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -133,16 +152,20 @@
 </li>
 {{ end }}
 
+<!-- Podcasts -->
 {{ if or (eq .File.Dir "podcasts/") (eq .File.Dir "podcasts\\") }}
 <li data-type="podcast">
     <section class="uk-section uk-section-small uk-display-inline-block uk-margin-remove uk-flex-middle small-post-width content-section uk-height-medium uk-padding-remove">
         <div class="uk-container content-spacing">
+            <!-- Content -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
+                <!-- Spotify Podcast Embed -->
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <iframe title="{{.Title}}" src={{ replace .Params.link "episode" "embed-podcast/episode" }} width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
             </div>
 
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow no-top-margin">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -151,12 +174,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+            <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -169,15 +194,17 @@
 </li>
 {{ end }}
 
+<!-- Videos -->
 {{ if or (eq .File.Dir "videos/") (eq .File.Dir "videos\\") }}
 <li data-type="video">
     <section class="video uk-section uk-section-small uk-display-inline-block uk-margin-remove video-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
+            <!-- Video Content -->
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-padding-remove uk-flex uk-light white-background">
+                    <!-- Video Source - YouTube || Video Upload -->
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small" class="uk-width-1-1">
                         <a title="{{.Title}}" aria-label="{{.Title}}" class="uk-link-reset" href="{{.Permalink}}">
-
                             {{ if (in .Params.link.url "https://www.youtube.com/watch?v=") }}
                                 <iframe title="{{.Title}}" class="uk-height-medium uk-width-1-1 border-rounded" src="https://www.youtube.com/embed/{{.Params.link.id}}"
                                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -192,6 +219,7 @@
                 </div>                                    
             </div>
 
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -200,12 +228,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+            <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -218,12 +248,15 @@
 </li>
 {{ end }}
 
+<!-- Articles -->
 {{ if or (eq .File.Dir "articles/") (eq .File.Dir "articles\\") }}
 <li data-type="article">
     <section class="article uk-section uk-section-small uk-display-inline-block uk-margin-remove article-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
+            <!-- Content -->
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left article-header">
+                    <!-- Title -->
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ $title_colour := "black" }}
                         {{ if or (eq .Params.image "uploads/book.jpg") (eq .Params.image "") }}
@@ -236,6 +269,7 @@
                     </div>
                 </div>
 
+                <!-- Background Image -->
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if or (eq .Params.image "uploads/book.jpg") (eq .Params.image "") }}
@@ -246,7 +280,8 @@
                     </div>
                 </div>         
             </div>
-            
+
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -255,12 +290,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+            <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
@@ -273,11 +310,14 @@
 </li>
 {{ end }}
 
+<!-- Testimonies -->
 {{ if or (eq .File.Dir "testimonies/") (eq .File.Dir "testimonies\\") }}
 <li data-type="testimony">
     <section class="testimony uk-section uk-section-small uk-display-inline-block uk-margin-remove testimony-width uk-padding-remove content-section">
         <div class="uk-container border-rounded content-spacing">
+            <!-- Content -->
             <div class="uk-height-medium uk-cover-container border-rounded uk-box-shadow-large pointer-cursor" onclick="location.href='{{.Permalink}}'">
+                <!-- Title -->
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-left uk-flex-bottom uk-light uk-text-left testimony-header">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         <h3 class="post-header white">
@@ -286,6 +326,7 @@
                     </div>
                 </div>
 
+                <!-- Background Image -->
                 <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-padding-remove uk-flex-middle uk-light uk-text-left white-background">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                         {{ if or (eq .Params.image "uploads/sharing-the-word.jpg") (eq .Params.image "") }}
@@ -297,6 +338,7 @@
                 </div>                               
             </div>
 
+            <!-- Category -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom category small-shadow">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <a title="{{humanize .Params.categories}}" class="uk-link-reset" href="{{.Site.BaseURL}}categories/{{.Params.categories}}">
@@ -305,12 +347,14 @@
                 </div>
             </div>
 
+            <!-- Save Button -->
             <div class="uk-overlay uk-light uk-text-left uk-text-bottom save small-shadow uk-border-circle" onclick="savePost('{{ .Title }}', '{{ .Params.categories }}', '{{ .Type }}');">
                 <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
                     <img class="uk-image" href="#" data-src="{{.Site.BaseURL}}img/Save.svg" width="60px" height="60px" alt="Save" uk-img>
                 </div>
             </div>
 
+            <!-- Share Button -->
             <a href="#" aria-label="Share Post" uk-toggle="target: #share-modal">
                 <div class="uk-overlay uk-light uk-text-left uk-text-bottom share small-shadow uk-border-circle">
                     <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">

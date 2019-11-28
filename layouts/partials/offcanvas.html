@@ -1,12 +1,16 @@
+<!-- Mobile Offcanvas Navigation -->
 <div id="offcanvas-nav" data-uk-offcanvas="overlay: true; esc-close: true; bg-close: true; flip: true;">
 	<div class="uk-offcanvas-bar uk-flex uk-flex-column uk-offcanvas-bar-animation uk-offcanvas-slide uk-background-default">
 		<ul class="uk-nav uk-nav-primary uk-nav-left">
 			<li class="uk-nav-header">
+				<!-- Navigation Close Button -->
 				<img id="mobile-nav-close" class="uk-offcanvas-close flip navbutton uk-hidden@m" data-src="{{.Site.BaseURL}}/img/Navigation.svg" alt="Navigate" uk-img>
+				<!-- Logo -->
 				<a href="{{.Site.BaseURL}}" class="uk-padding-remove" title="Logo">
 					<img class="uk-logo uk-align-right" alt="Logo" height=36px width=36px src="{{.Site.BaseURL}}img/icons/icon-72x72.png">
 				</a>
 			</li>
+			<!-- Navigation Link Items -->
 			<li class="uk-active"><a class="uk-link-muted" href="{{.Site.BaseURL}}">Home</a></li>
 			<li class="uk-parent">
 				<a href="{{.Site.BaseURL}}categories">Resources</a>
@@ -21,6 +25,7 @@
 			<li><a href="{{.Site.BaseURL}}music"><span class="uk-margin"></span>Music</a></li>
 			<li><a href="{{.Site.BaseURL}}about"><span class="uk-margin"></span>About</a></li>
 			<li><a href="{{.Site.BaseURL}}contact"><span class="uk-margin"></span>Contact</a></li>
+			<!-- Social Media -->
 			<li class="uk-align-center uk-text-center">
 				<a id="mobile-nav-instagram" class="uk-display-inline-block" href="https://www.instagram.com/realiveyouth/" aria-label="Instagram" rel="noopener nofollow" target="_blank">
 					<img data-src="{{.Site.BaseURL}}img/instagram.svg" width="42px" alt="Instagram" uk-img>
@@ -29,6 +34,7 @@
 					<img data-src="{{.Site.BaseURL}}img/facebook.svg" width="42px" alt="Facebook" uk-img>
 				</a>
 			</li>
+			<!-- Copyright and Privacy -->
 			<li id="mobile-nav-footer" class="uk-position-bottom-center uk-nav-center uk-padding">
 				<span class="uk-margin"></span><span id="copyright">© Realive Youth 2019</span>
 				<a id="privacy-link" href="{{.Site.BaseURL}}privacy">| Privacy</a>

@@ -1,5 +1,5 @@
-function hideSavedPostsButton() {
-    var button = document.getElementById("savedPostsButton");
+function hideMoreButton() {
+    var button = document.getElementById("moreButton");
     if (button.style.display === "none") {
         button.style.display = "block";
     }

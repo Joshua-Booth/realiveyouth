@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    {{ block "metadata" . }}{{ end }}
-    {{- partial "head.html" . -}}
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}</title>
-  </head>
-  <body>
+<head>
+	{{ block "metadata" . }}{{ end }}
+	{{- partial "head.html" . -}}
+	<title>{{ block "title" . }}
+	{{ .Site.Title }}
+	{{ end }}</title>
+</head>
+<body>
     {{- partial "header.html" . -}}
     {{- partial "navigation.html" . -}}
 
@@ -32,5 +32,5 @@
         });
         }
     </script>
-  </body>
+</body>
 </html>

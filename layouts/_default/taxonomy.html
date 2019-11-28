@@ -8,15 +8,14 @@
 	{{ partial "head.html"}}
 </head>
 <body>
-	<!--HEADER-->
+    <!-- Default template for taxonomies-->
+
+	<!-- Default Header -->
 	{{ partial "header.html" . }}
-    <!--/HEADER-->
 
-    <!-- NAVIGATION -->
 	{{ partial "navigation.html" . }}
-    <!-- /NAVIGATION -->
 
-    <!--CONTENT-->
+    <!-- Page Content -->
     <div class="uk-section uk-section-default">
         <div class="uk-container">
             <div class="uk-grid" data-ukgrid>
@@ -34,7 +33,9 @@
                         {{ end }}
                     </ul>
                     </article>
-				</div>
+                </div>
+
+                <!-- About -->
                 <div class="uk-width-1-3@m">
                     <h4 class="uk-heading-line uk-text-bold" style="text-align:center"><span>About Us</span></h4>
                     <div class="uk-tile uk-tile-small uk-tile-muted uk-border-rounded">
@@ -44,16 +45,8 @@
             </div>
         </div>
     </div>
-    <!--/CONTENT-->
 
-    <!-- /BOTTOM NAVIGATION -->
-
-    <!--FOOTER-->
 	{{ partial "footer.html" . }}
-    <!--/FOOTER-->
-
-    <!-- OFFCANVAS -->
 	{{ partial "offcanvas.html" . }}
-    <!-- /OFFCANVAS -->
 </body>
 </html>

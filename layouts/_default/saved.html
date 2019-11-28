@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -8,14 +8,16 @@
     {{- partial "head.html" . -}}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/filter.css" type="text/css"/>
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Default Desktop Header -->
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
     
     {{- partial "navigation.html" . -}}
 
-    <!-- Header -->
+    <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
+        <!-- Logo -->
         <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
                 <a href="{{.Site.BaseURL}}" title="Logo">
@@ -23,11 +25,12 @@
                 </a>
             </div>
         </div>
-        <!-- Header Image -->
+        <!-- Backgound Image -->
         <img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
         <img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
     </div>
 
+    <!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 			<!-- Page Title -->
@@ -35,17 +38,19 @@
         </div>
     </div>
 	
-	<!--CONTENT-->
+	<!-- Page Content -->
     <div class="uk-section uk-section-default">
 		<div class="uk-container">
 			<div class="uk-grid uk-text-center" data-ukgrid>
 				<div id="content" class="uk-width-2-4@m">
+                    <!-- Content Filter UI -->
                     <div id="filter" uk-filter="target: .js-filter">
                         <div id="filter-container" class="uk-grid-small uk-grid-divider uk-child-width-auto filter-controls" hidden uk-grid>
                             <div id="filter-dialog" class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
                                 <h2 class="uk-modal-title uk-text-center">Filter Resources</h2>
                                 <button class="uk-modal-close-default filter-button" type="button" data-uk-icon="close" uk-toggle="target: #filter-container"></button>
                                 
+                                <!-- Filter Options -->
                                 <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
                                     <div>
                                         <ul class="uk-subnav uk-subnav-pill" uk-margin>
@@ -67,12 +72,14 @@
                             </div>
                         </div>
 
+                        <!-- Filter Buttons -->
                         <div id="set-filter" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-left">
                             Filter: <span class="uk-badge pointer-cursor" uk-toggle="target: #filter-container">All</span>
 
                             {{- partial "mobile_filter.html" . -}}
                         </div>
 
+                        <!-- No Content Error Message -->
                         <div id="no-filter-content" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-top-small">
                             No saved posts found.
                         </div>
@@ -87,7 +94,6 @@
 			</div>
 		</div>
 	</div>
-	<!--/CONTENT-->
 
 	{{ block "footer" . }}{{ end }}
 	
@@ -95,7 +101,7 @@
 	{{- partial "offcanvas.html" . -}}
 	{{- partial "footer.html" . -}}
 
-    <!-- Saved Post Share Modal -->
+    <!-- Share Modal -->
     <div id="share-modal" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-text-center">
             <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -110,8 +116,10 @@
         </div>
     </div>
 
+    <!-- Filter Script -->
     <script src="{{.Site.BaseURL}}/js/filter.js"></script>
 
+    <!-- Netlify Identity -->
 	<script>
 	if (window.netlifyIdentity) {
 	window.netlifyIdentity.on("init", user => {
@@ -125,6 +133,7 @@
     </script>
     
     <script>
+        // Loads saved posts everytime the page is refreshed
         loadSavedPosts();
     </script>
 </body>

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
     <title>Realive Equipped Youth Manual</title>
     {{- partial "head.html" . -}}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/content.css" type="text/css"/>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Default Desktop Header -->
     <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
     
     {{- partial "navigation.html" . -}}
 
-    <!-- Header Image -->
+    <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
+        <!-- Logo -->
         <div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
             <div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
                 <a href="{{.Site.BaseURL}}" title="Logo">
@@ -22,10 +24,12 @@
                 </a>
             </div>
         </div>
+        <!-- Backgound Image -->
         <img class="uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-landscape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
         <img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-landscape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
     </div>
 
+    <!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
             <!-- Page Title -->
@@ -33,6 +37,7 @@
         </div>
     </div>
 
+    <!-- Page Content -->
     <div class="uk-section uk-section-default">
         <div class="uk-container">
             <div class="uk-grid" data-ukgrid>
@@ -61,6 +66,7 @@
     {{- partial "offcanvas.html" . -}}
     {{- partial "footer.html" . -}}
 
+    <!-- Netlify Identity -->
     <script>
     if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {

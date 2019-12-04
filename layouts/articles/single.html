@@ -9,6 +9,9 @@
     <article class="uk-article uk-align-center uk-padding uk-padding-remove-top single-content-width">
         <p class="uk-article-meta">
             {{ if eq .Params.link "" }}
+                {{ if and (isset .Params "author") (ne .Params.author "") }}
+                    By {{ .Params.author }}
+                {{ end }}
                 {{ .Content }}
             {{ else }}
                 <h2>Please wait while we redirect you to your article.</h2>

@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: share
 type: articles
 image: uploads/book.jpg
+author: "Matt Smethurst & Elliot Clark"
 link: ''
 ---
 The following quotes caught my attention as I (Matt Smethurst) read Elliot Clark‘s marvelous new book, Evangelism as Exiles: Life on Mission as Strangers in Our Own Land (TGC, 2019). I cannot remember the last time I felt this convicted, and inspired, to hold forth the beauty of gospel grace.  
@@ -17,7 +18,8 @@ More and more I see Christians incensed when the world mocks us and our faith. B
 ```
 
 ```
-As you walk the lonely dirt road into a shameful exile, away from what you’ve known in a sheltered American past, you’re not alone. In fact, you’re not even excluded. Just the opposite. You’re being included into God’s global family. You’re joining Christ outside the camp. 
+As you walk the lonely dirt road into a shameful exile, away from what you’ve known in a sheltered American past, you’re not alone. In fact, you’re not even excluded. Just the opposite. You’re being included into God’s global family. You’re joining Christ outside the camp. 
+
 ```
 
 ```

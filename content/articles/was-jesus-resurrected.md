@@ -4,11 +4,10 @@ date: '2019-10-31'
 categories: explain
 type: articles
 image: /uploads/federico-beccari-477296.jpg
+author: "R. Robert Creech, Ph.D."
 link: ""
 ---
 ## Was Jesus Resurrected?
-
-By:  R. Robert Creech, Ph.D. 
 
 The idea of a dead man returning to life does not fit anything we know about reality.
 

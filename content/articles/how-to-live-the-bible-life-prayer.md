@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/praying-guy.jpg
+author: "Mel Lawrenz"
 link: ''
 ---
 In a teaching as clear and fresh as the blue Sea of Galilee, Jesus said this is how you should pray: 

@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: encourage
 type: articles
 image: /uploads/billygraham.jpg
+author: "Matt Brown"
 link: ''
 ---
 Billy Graham passed away in early 2018. nearly 100 years after he was born. That day, America—and the world, really—lost one of the greatest evangelists of all time. He undoubtedly communicated the gospel message to more people face-to-face than anyone in human history. Three hundred million people heard him share the simple gospel message live, and countless millions more watched and listened through television, radio broadcasts, and online videos. 

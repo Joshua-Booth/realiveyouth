@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/fearful-man.jpg
+author: "Nate Pyle"
 link: ''
 ---
 “God won’t give you more than you can handle.” 

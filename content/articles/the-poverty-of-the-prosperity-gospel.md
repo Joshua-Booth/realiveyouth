@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/7.8-poverty.jpg
+author: "Vaneetha Rendall Risner"
 link: ''
 ---
 When it comes to my view of the prosperity gospel, the Book of Job has both shaken me and shaped me. 

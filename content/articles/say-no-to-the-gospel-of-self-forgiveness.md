@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/photo-1467844275056-5a15a5a4946a.jpg
+author: "John Beeson"
 link: ''
 ---
 She sits in my office, tears running down her face. Two years ago her mother died in hospice while she lay asleep at home. She was trying to get a decent night’s rest after days spent at her mother’s side. “I just can’t forgive myself. I let her die alone. I knew I should have been there, but I was selfish. I can never forgive myself for that.” 

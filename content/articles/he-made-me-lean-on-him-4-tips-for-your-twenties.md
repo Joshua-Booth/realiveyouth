@@ -4,12 +4,9 @@ date: '2019-11-24'
 categories: encourage
 type: articles
 image: /uploads/splitshire-6242.jpg
+author: "Samuel James"
+link: ""
 ---
-
-
-Article by Samuel James
-
-
 
 “So, how does it feel to be thirty?” That question has always made me feel like I’ve been missing out on some magical emotion that is bestowed on normal people on their birthday. But I don’t think so.
 

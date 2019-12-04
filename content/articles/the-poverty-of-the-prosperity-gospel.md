@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/7.8-poverty.jpg
+title_colour: "#FFFFFF"
 author: "Vaneetha Rendall Risner"
 link: ''
 ---

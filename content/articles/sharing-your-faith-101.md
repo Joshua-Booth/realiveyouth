@@ -4,6 +4,7 @@ date: "2019-9-29"
 categories: "share"
 type: articles
 image: "uploads/sharing-the-word.jpg"
+title_colour: "#FFFFFF"
 author: "The Billy Graham Evangelistic Association"
 link: ""
 ---

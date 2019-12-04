@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/fearful-man.jpg
+title_colour: "#FFFFFF"
 author: "Nate Pyle"
 link: ''
 ---

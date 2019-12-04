@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: encourage
 type: articles
 image: /uploads/billygraham.jpg
+title_colour: "#FFFFFF"
 author: "Matt Brown"
 link: ''
 ---

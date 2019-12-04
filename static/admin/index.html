@@ -9,12 +9,17 @@
 <body>
   	<!-- Include the script that builds the page and powers Netlify CMS -->
   	<script src="https://unpkg.com/netlify-cms@^2.9.7/dist/netlify-cms.js"></script>
-  	<!-- Include the youtube widget -->
+  	<!-- Include the YouTube widget -->
   	<script src="https://unpkg.com/netlify-cms-widget-youtube@^0.3.0"></script>
+	<!-- Include the Color widget -->
+	<script src="https://unpkg.com/netlify-cms-widget-color@3.0.1/dist/umd/color.min.js"></script>
 
   	<script>
     	// Register YouTube widget
-    	CMS.registerWidget('youtube', youtubeControl, youtubePreview)
+    	CMS.registerWidget('youtube', youtubeControl, youtubePreview);
+
+		// Register Color widget
+		CMS.registerWidget("color", ColorWidget.Control);
   	</script>
 </body>
 </html>

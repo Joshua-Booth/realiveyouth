@@ -3,7 +3,8 @@ title: He Made Me Lean on Him - 4 Tips for Your Twenties
 date: '2019-11-24'
 categories: encourage
 type: articles
-image: /uploads/splitshire-6242.jpg
+image: /uploads/laying-in-grass.jpg
+title_colour: "#FFFFFF"
 author: "Samuel James"
 link: ""
 ---

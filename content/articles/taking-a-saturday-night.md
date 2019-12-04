@@ -4,6 +4,7 @@ date: '2019-11-26'
 categories: youth-group
 type: articles
 image: ''
+title_colour: "#FFFFFF"
 link: ''
 ---
 ## Checklist

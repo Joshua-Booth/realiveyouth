@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: share
 type: articles
 image: /uploads/religion.jpg
+title_colour: "#FFFFFF"
 author: "Sheri Bell"
 link: ''
 ---

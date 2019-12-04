@@ -4,6 +4,7 @@ date: '2019-11-01'
 categories: encourage
 type: testimonies
 image: ''
+title_colour: "#FFFFFF"
 ---
 
 

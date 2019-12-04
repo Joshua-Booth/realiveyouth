@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/photo-1467844275056-5a15a5a4946a.jpg
+title_colour: "#000000"
 author: "John Beeson"
 link: ''
 ---

@@ -38,7 +38,7 @@
         {{ if or (eq $image "") (eq $image "uploads/book.jpg") }}
           {{ $image = "uploads/book.jpg" }} <!-- Set default image -->
         {{ end }}
-        <img class="blur" data-src="{{.Site.BaseURL}}/{{$image}}" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+        <img data-src="{{.Site.BaseURL}}/{{$image}}" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
     </div>
 
 	<!-- Page Title Container -->
@@ -51,7 +51,9 @@
 			</div>
 			{{ end }}
 			<!-- Page Title -->
-			<h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent white">{{ $title }}</h1>
+			<h1 class="uk-margin-top uk-text-left uk-margin-small-bottom uk-margin-remove-adjacent white" style="color:{{.Params.title_colour}}!important">
+				{{ $title }}
+			</h1>
       	</div>
       
       	{{ if eq .Params.link "" }}

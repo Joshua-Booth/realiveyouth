@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: share
 type: articles
 image: uploads/book.jpg
+title_colour: "#FFFFFF"
 author: "Matt Smethurst & Elliot Clark"
 link: ''
 ---

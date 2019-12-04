@@ -4,6 +4,7 @@ date: '2019-10-31'
 categories: explain
 type: articles
 image: /uploads/federico-beccari-477296.jpg
+title_colour: "#FFFFFF"
 author: "R. Robert Creech, Ph.D."
 link: ""
 ---

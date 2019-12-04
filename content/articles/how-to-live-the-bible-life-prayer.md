@@ -4,6 +4,7 @@ date: '2019-11-25'
 categories: deepen
 type: articles
 image: /uploads/praying-guy.jpg
+title_colour: "#FFFFFF"
 author: "Mel Lawrenz"
 link: ''
 ---

@@ -1,24 +1,106 @@
-{{ define "metadata" }}
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
-    <title>Realive Equipped Youth Manual</title>
-{{ end }}
-{{ define "main" }}
-	<!-- Default List Page Template -->
-	<main>
-		<article>
-		<header>
-			<h1>{{.Title}}</h1>
-		</header>
-		{{- .Content -}}
-		<ul>
-		{{ range .Pages }}
-			<li>
-				<a href="{{.Permalink}}">{{.Title}}</a>
-			</li>
-		{{ end }}
-		</ul>
-	</article>
-	<main>
-{{ end }}
+    <title> {{humanize .Title }} - Realive Equipped Youth Manual</title>
+	{{- partial "head.html" . -}}
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/content.css" type="text/css"/>
+</head>
+<body>
+	<!-- Default Desktop Header -->
+    <span class="uk-visible@s">{{- partial "header.html" . -}}</span>
+    
+    {{- partial "navigation.html" . -}}
+
+	{{ $title := .Title }}
+	{{ $type := .Title }}
+	{{ $image := "" }}
+	{{ $title_colour := .Params.title_colour }}
+
+	{{ if eq $title "Articles" }}
+		{{ $type = "article" }}
+		{{ $image = "resources.jpg" }}
+	{{ else if eq $title "Bible Verses" }}
+		{{ $type = "verse" }}
+		{{ $image = "bible.jpg" }}
+	{{ else if eq $title "Podcasts" }}
+		{{ $image = "microphone.jpg" }}
+	{{ else if eq $title "Questions" }}
+		{{ $type = "question" }}
+		{{ $image = "question.jpg" }}
+	{{ else if eq $title "Songs" }}
+		{{ $type = "song" }}
+		{{ $image = "drums.jpg" }}
+	{{ else if eq $title "Testimonies" }}
+		{{ $image = "sharing-the-word.jpg" }}
+	{{ else if eq $title "Videos" }}
+		{{ $type = "video" }}
+		{{ $image = "video.jpg" }}
+	{{ else }}
+		{{ $title = print (humanize $title) }}
+		{{ $image = "resources.jpg" }}
+	{{ end }}
+
+    <!-- Custom Mobile Header -->
+    <div class="uk-cover-container uk-width-1-1 uk-height-large">
+		<!-- Logo -->
+		<div class="uk-position-cover uk-flex uk-flex-center uk-flex-bottom uk-light uk-text-left">
+			<div class="uk-position-top uk-overlay uk-padding-remove single-post-nav-button uk-hidden@s">
+				<a href="{{ .Site.BaseURL }}" title="Logo">
+					<img class="uk-logo uk-hidden@l" alt="Logo" height=36px width=36px src="{{ .Site.BaseURL }}img/icons/icon-72x72.png">
+				</a>
+			</div>
+		</div>
+		<!-- Backgound Image -->
+		<img class="{{ $type }}-post-image" data-src="{{.Site.BaseURL}}/uploads/{{ $image }}" width="100%" height="100%" alt="{{ $title }}" uk-img uk-cover>
+	</div>
+
+	<!-- Page Title Container -->
+    <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
+        <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+			<!-- Page Title -->
+			<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium" style="color:{{$title_colour}}!important">
+				{{ $title }}
+			</h1>
+        </div>
+    </div>
+	
+    <!-- Page Content -->
+    <div class="uk-section uk-section-default">
+		<div class="uk-container">
+			<div class="uk-grid uk-text-center" data-ukgrid>
+				<!-- Content -->
+				<div id="content" class="uk-width-2-4@m">
+					<ul id="category-content" class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-animation-slide-bottom-small" uk-grid="masonry: true">
+					{{- .Content -}}
+						{{ range where .Pages "Type" "in" site.Params.mainSections}}
+							{{- partial "content_types.html" . -}}
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{ block "footer" . }}{{ end }}
+	
+	{{- partial "mobilenav.html" . -}}
+	{{- partial "offcanvas.html" . -}}
+	{{- partial "footer.html" . -}}
+
+	<!-- Netlify Identity -->
+	<script>
+	if (window.netlifyIdentity) {
+	window.netlifyIdentity.on("init", user => {
+		if (!user) {
+		window.netlifyIdentity.on("login", () => {
+			document.location.href = "/admin/";
+		});
+		}
+	});
+	}
+	</script>
+</body>
+</html>

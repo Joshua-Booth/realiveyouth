@@ -15,6 +15,33 @@
     
     {{- partial "navigation.html" . -}}
 
+	{{ $title := .Title }}
+	{{ $image := "" }}
+	{{ $blur := false }}
+
+	{{ if eq $title "youth-group"}}
+		{{ $title = "Youth Group" }}
+		{{ $image = "youth.jpg" }}
+		{{ $blur = "true" }}
+	{{ else if eq $title "Categories"}}
+		{{ $title = print "Resource Categories" }}
+		{{ $image = "resources.jpg" }}
+	{{ else }}
+		{{ if eq (humanize $title) "Share" }}
+			{{ $image = "share.jpg" }}
+		{{ else if eq (humanize $title) "Encourage" }}
+			{{ $image = "rocky-mountain.jpg" }}
+		{{ else if eq (humanize $title) "Explain" }}
+			{{ $image = "city-skyscrapers.jpg" }}
+		{{ else if eq (humanize $title) "Deepen" }}
+			{{ $image = "blue-seascape.jpg" }}
+		{{ else }}
+			{{ $image = "resources.jpg" }}
+		{{ end }}
+		{{ $title = print (humanize $title) " your Faith" }}
+	{{ end }}
+
+
     <!-- Custom Mobile Header -->
     <div class="uk-cover-container uk-width-1-1 uk-height-large">
 		<!-- Logo -->
@@ -26,22 +53,13 @@
 			</div>
 		</div>
 		<!-- Backgound Image -->
-		<img class="zoomed uk-hidden@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
-		<img class="uk-visible@m" data-src="{{.Site.BaseURL}}/uploads/blue-seascape.jpg" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
+		<img class='{{ if eq $blur "true" }}blur{{ end }}' data-src="{{.Site.BaseURL}}/uploads/{{ $image }}" width="100%" height="100%" alt="{{.Title}}" uk-img uk-cover>
 	</div>
 
 	<!-- Page Title Container -->
     <div class="uk-align-center uk-padding uk-padding-remove-top uk-padding-remove-bottom uk-margin-remove-top uk-flex uk-flex-bottom single-content-container">
         <div class="page-title position-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 			<!-- Page Title -->
-			{{ $title := .Title }}
-			{{ if eq $title "youth-group"}}
-				{{ $title = "Youth Group" }}
-			{{ else if eq $title "Categories"}}
-				{{ $title = print "Resource Categories" }}
-			{{ else }}
-				{{ $title = print (humanize $title) " your Faith" }}
-			{{ end }}
 			<h1 class="uk-margin-top uk-text-center uk-margin-small-bottom uk-margin-remove-adjacent white uk-heading-medium">{{$title}}</h1>
         </div>
     </div>
@@ -133,6 +151,28 @@
 								<div>
 									<button onclick="location.href='{{.Site.BaseURL}}/categories/deepen'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
 										Deepen
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<hr class="button-divider" />
+
+						<div class="uk-child-width-expand@s uk-text-center button-grid-container" uk-grid>
+							<div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center" uk-grid>
+								<!-- Youth Group Button -->
+								<div>
+									<button onclick="location.href='{{.Site.BaseURL}}/categories/youth-group'" class="uk-button uk-button-default uk-inline uk-width-1-1 border-rounded category-button small-shadow">
+										Youth Group
+									</button>
+								</div>
+							</div>
+							<div class="navbutton-spacer"></div>
+							<div class="uk-grid-column-small uk-grid-row-large uk-child-width-2-4@s uk-text-center uk-margin-remove-top" uk-grid>
+								<!-- Music Button -->
+								<div>
+									<button onclick="location.href='{{.Site.BaseURL}}/music'" class="uk-button uk-button-default uk-width-1-1 border-rounded category-button small-shadow">
+										Music
 									</button>
 								</div>
 							</div>

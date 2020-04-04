@@ -5,7 +5,7 @@ categories: deepen
 type: videos
 link:
   url: >-
-    https://www.youtube.com/watch?time_continue=27&v=jvi4JSuzBQU&feature=emb_logo
+    https://www.youtube.com/watch?v=jvi4JSuzBQU&feature=emb_logo
   id: jvi4JSuzBQU
   mediaType: video
   imageURL: 'https://img.youtube.com/vi/jvi4JSuzBQU/maxresdefault.jpg'

@@ -3,7 +3,7 @@ title: I Can't Handle Everything and Neither Can You
 date: '2019-11-25'
 categories: deepen
 type: articles
-image: /uploads/fearful-man.jpg
+image: uploads/luke-pamer-40086.jpg
 title_colour: '#FFFFFF'
 author: Nate Pyle
 link: ''

@@ -70,7 +70,7 @@ collections:
     - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
     - {label: Type, name: type, widget: hidden, default: "testimonies"}
     - {label: "Header Image", name: "image", widget: image, default: "uploads/church.jpg", required: false, allow_multiple: false}
-    - {label: "Header Title Colour", name: "title_colour", widget: "color"}
+    - {label: "Header Title Colour", name: "title_colour", widget: "string", default: "black", required: false}
     - {label: "Content", name: "body", widget: "markdown", required: true}
 
 # Article Content Type
@@ -85,7 +85,7 @@ collections:
     - {label: "Categories", name: "categories", widget: "select", options: ["share", "encourage", "explain", "deepen", "youth-group"], required: true}
     - {label: Type, name: type, widget: hidden, default: "articles"}
     - {label: "Header Image", name: "image", widget: image, default: "uploads/book.jpg", required: false, allow_multiple: false}
-    - {label: "Header Title Colour", name: "title_colour", widget: "color"}
+    - {label: "Header Title Colour", name: "title_colour", widget: "string", default: "black", required: false}
     - {label: "Author", name: "author", widget: "string", required: false}
     - {label: "Text Content", name: "body", widget: "markdown", required: true}
     - {label: "URL", name: "link", widget: "string", default: "", required: false}
